@@ -1,0 +1,36 @@
+
+  .search-filter {
+    margin: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .search-filter > input {
+    width: 55rem;
+    font-size: 0.9rem;
+    outline: none;
+    border: none;
+    margin-right: 2rem;
+    margin-left: 3.5rem;
+    padding: 1rem 0.5rem;
+    background: #232B53;
+    border-radius: 8px;
+    color: #fff;
+  }
+  .search-filter > input::placeholder {
+    color: #fff;
+  }
+
+.button-filter{
+  text-decoration: none;
+    background-color: #232B53;
+    padding: 0.5rem;
+    border-color: transparent;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.button-filter > img{
+  filter: invert(1);
+
+}

@@ -1,0 +1,48 @@
+.navbar{
+    display: flex;
+}
+.logo{
+  font-weight: 300;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.menu > img{
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-left: 0.7rem;
+    cursor: pointer;
+}
+.menu > p{
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin: 0;
+}
+.drop-down {
+    position: absolute;
+    right: 1rem;
+  }
+  .drop-down ul {
+    width: 10rem;
+    list-style-type: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.4rem;
+    padding: 0;
+  }
+  .drop-down li {
+    text-align: center;
+    padding: 0.5rem 1.3rem;
+    border-bottom-color: #eee;
+    background-color: #030824;
+    cursor: pointer;
+  }
+  .drop-down li:hover {
+    background-color: rgba(3, 8, 36, 0.87);
+  }
+  .drop-down li a {
+    text-decoration: none;
+    color: white;
+  }

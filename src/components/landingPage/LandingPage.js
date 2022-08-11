@@ -12,29 +12,29 @@ import Footer from './footer'
 
 import LoginModal from '../Modals/LoginModal'
 const LandingPage = () => {
-    const [isLogin,setIsLogin]=useState(false);
-    const showLoginPage=()=>{
-       setIsLogin(true)
+    const [isLogin, setIsLogin] = useState(false);
+    const showLoginPage = () => {
+        setIsLogin(true)
     };
 
-    const loginHandler=()=>{
+    const loginHandler = () => {
         setIsLogin(false);
     }
     return (
         <>
-        {isLogin && <LoginModal onLogin={loginHandler}/>}
+            {isLogin && <LoginModal onLogin={loginHandler} />}
             <div className="navbar">
                 <div className="logo">
                     <p>Sahayog</p>
                 </div>
                 <div className="menu-items">
-                    <button  onClick={showLoginPage} class="btn-landingPage">Login</button>
+                    <button onClick={showLoginPage} class="btn-landingPage">Login</button>
                     <button class="btn-outline-landingPage">Sign Up</button>
                 </div>
             </div>
             <div className="landing-page d-flex flex-column justify-content-center align-items-center pt-5">
 
-                <CardLandingPage imageName={vsCodeVariable} />
+                <CardLandingPage onClick={showLoginPage} imageName={vsCodeVariable} />
 
                 <h1 className='mt-5 mb-5'>Our Features</h1>
                 <CardLandingPage onClick={showLoginPage} imageName={post1} />
@@ -49,4 +49,4 @@ const LandingPage = () => {
     )
 }
 
-export default  LandingPage
+export default LandingPage

@@ -16,7 +16,7 @@ const Navbar = () => {
                     <p>Sagayog</p>
                 </div>
                 <div className="menu">
-                    <p>Het Parekh</p>
+                    <p>User Name</p>
                     <img src={avatar} alt="" onClick={openProfile} />
                 </div>
             </div>

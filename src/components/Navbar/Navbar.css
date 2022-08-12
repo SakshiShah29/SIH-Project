@@ -1,8 +1,11 @@
 .navbar{
     display: flex;
+    background: #030824;
 }
 .logo{
   font-weight: 300;
+  color:white;
+  padding-left: 12px;
 }
 .menu{
     display: flex;
@@ -36,7 +39,7 @@
     text-align: center;
     padding: 0.5rem 1.3rem;
     border-bottom-color: #eee;
-    background-color: #030824;
+    background-color: #030824 !important;
     cursor: pointer;
   }
   .drop-down li:hover {

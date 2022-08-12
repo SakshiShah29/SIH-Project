@@ -1,12 +1,15 @@
 import './App.css';
-import LandingPage from './components/landingPage/LandingPage';
-import Navbar from './components/Navbar/Navbar';
-import HomePage from './components/homePage/homePage';
+import CardUi from './components/ProjectDetails/CardUi';
+import ProjectDetails from './components/ProjectDetails/ProjectDetails';
+// import Navbar from './components/Navbar/Navbar';
+// import ProjectDetails from './components/ProjectDetails/ProjectDetails';
+// import CommentSection from './components/ProjectDetails/CommentSection';
+// import ProjectDetails from './components/ProjectDetails/ProjectDetails';
+
 function App() {
   return (
     <>
-      {/* <LandingPage /> */}
-      <HomePage />
+<ProjectDetails title="Plagarism Detector"/>
     </>
   );
 }

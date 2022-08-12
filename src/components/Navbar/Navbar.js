@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Link } from "react-router-dom";
 import avatar from '../../images/avatar.png'
 import './Navbar.css'
 const Navbar = () => {
@@ -23,8 +24,8 @@ const Navbar = () => {
 
             <div className="drop-down d-none">
                 <ul>
-                    <li> <a href="">My Profile</a> </li>
-                    <li> <a href="">LogOut</a> </li>
+                    <li> <Link to="profilePage">My Profile</Link> </li>
+                    <li> <Link to="/landingPage">LogOut</Link> </li>
                 </ul>
             </div>
 

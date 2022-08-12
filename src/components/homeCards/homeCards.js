@@ -1,11 +1,16 @@
 import React from 'react'
 import './homeCards.css'
-const homeCards = () => {
+import { useNavigate } from 'react-router-dom';
+const HomeCards = () => {
+    const navigate = useNavigate();
+    const handleProjectHomeCLick = () => {
+        navigate('/ProjectDetails');
+    }
     return (
         <>
 
-            <div class="homeCard">
-                <span class="badge rounded-pill bg-color text-bg-primary">Completed</span>
+            <div className="homeCard" onClick={handleProjectHomeCLick}>
+                <span className="badge rounded-pill bg-color text-bg-primary">Completed</span>
                 <p className='cardTitle'>Plagarism Detector</p>
                 <p className='cardSubtitle'>Charusat University of Science and Technology</p>
                 <div className="tech-stack">
@@ -21,4 +26,4 @@ const homeCards = () => {
     )
 }
 
-export default homeCards
+export default HomeCards

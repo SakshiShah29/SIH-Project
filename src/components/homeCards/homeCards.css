@@ -5,6 +5,7 @@
     padding: 1.2rem;
     margin: 1rem;
     width: 24rem;
+    cursor: pointer;
 }
 .bg-color{
     background-color: #48CCC6 !important;

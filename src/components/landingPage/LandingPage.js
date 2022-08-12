@@ -28,8 +28,8 @@ const LandingPage = () => {
                     <p>Sahayog</p>
                 </div>
                 <div className="menu-items">
-                    <button onClick={showLoginPage} class="btn-landingPage">Login</button>
-                    <button class="btn-outline-landingPage">Sign Up</button>
+                    <button onClick={showLoginPage} className="btn-landingPage">Login</button>
+                    <button className="btn-outline-landingPage">Sign Up</button>
                 </div>
             </div>
             <div className="landing-page d-flex flex-column justify-content-center align-items-center pt-5">

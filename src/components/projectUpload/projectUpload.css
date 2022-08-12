@@ -32,7 +32,7 @@
     font-weight: 300;
     margin-bottom: 0.5rem;
 }
-.tech-stacks{
+.tech-stacks , .domain-stack{
     border: 1px solid #684BFE;
     font-size: 0.8rem;
     padding: 0.2rem;

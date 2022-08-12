@@ -3,7 +3,7 @@ import arrow from '../../images/right-arrow.png'
 const button = (props) => {
     return (
         <>
-            <button onClick={props.onClick} class="buttons">  {props.buttonName} <img src={arrow} class="arrow-img" alt="arrow" /> </button>
+            <button onClick={props.onClick} className="buttons">  {props.buttonName} <img src={arrow} className="arrow-img" alt="arrow" /> </button>
         </>
     )
 }

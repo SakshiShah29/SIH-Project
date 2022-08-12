@@ -1,0 +1,47 @@
+.header {
+    
+    height: 5rem;
+    background: #030824;
+    padding: 0 10%;
+  }
+  
+  .header nav {
+    height: 100%;
+  }
+  
+  .header ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+justify-content: space-between;
+
+  }
+ Navlink > h3{
+    color:#fff;
+    text-decoration: none;
+  }
+  
+  
+  .header button {
+    font-size: 20px;
+    font-weight: 500;
+
+    width: 100%;
+    padding: 0rem 4.2rem;
+    background-color: #030824;
+    border-top: none;
+    border-right: none;
+    border-left:none;
+    border-bottom: none;
+  }
+  
+  .header button:hover,
+  
+  .header button.active {
+    color: #95bcf0;
+    
+padding-bottom:-10px;
+    border-bottom: 4px solid #95bcf0;
+  }

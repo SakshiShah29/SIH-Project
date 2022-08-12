@@ -1,0 +1,12 @@
+.navbar{
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn{
+    padding: -100px;
+    display: flex;
+    flex-direction: column;
+}
+

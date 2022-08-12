@@ -1,0 +1,37 @@
+h2{
+    
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 40px;
+color: #FFFFFF;
+
+}
+.upper{
+    display: flex;
+}
+
+.upper >img{
+    height: 30px;
+    width:30px;
+    margin-left:10px;
+}
+.upper> img:hover{
+    cursor: pointer;
+  
+    
+}
+h4{
+    
+    font-style: normal;
+    
+    font-size: 18px;
+    line-height: 16px;
+    color: #FFFFFF;
+    
+    }
+.details{
+    position:relative;
+    left:-110px;
+    margin-top:50px
+}

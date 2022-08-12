@@ -1,0 +1,29 @@
+.nav{
+    padding-right: 40px;
+    padding-top: 20px;
+}
+  .nav button {
+    color: #fff;
+    background-color: transparent;
+    outline: 1px solid #684BFE;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 500;
+   
+  }
+  
+
+  
+  .nav button:hover,
+  .nav button:active {
+    color: #fff;
+    background-color: #684BFE;
+  }
+  .nav > img{
+    height:30px;
+    width:30px;
+    margin-right: 16px;;
+  }

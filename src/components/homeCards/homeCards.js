@@ -1,6 +1,6 @@
 import React from 'react'
 import './homeCards.css'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 const HomeCards = () => {
     const navigate = useNavigate();
     const handleProjectHomeCLick = () => {

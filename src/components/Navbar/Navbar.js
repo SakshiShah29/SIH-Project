@@ -24,7 +24,7 @@ const Navbar = () => {
 
             <div className="drop-down d-none">
                 <ul>
-                    <li> <Link to="profilePage">My Profile</Link> </li>
+                    <li> <Link to="ProfilePage">My Profile</Link> </li>
                     <li> <Link to="/landingPage">LogOut</Link> </li>
                 </ul>
             </div>

@@ -13,6 +13,9 @@ import Profilepage from "./components/Profilepage/Profilepage";
 import HomePage from './components/homePage/homePage';
 // import ProjectUpload from './components/projectUpload/projectUpload';
 import ProjectDetails from './components/ProjectDetails/ProjectDetails';
+import Completed from "./components/Profilepage/Completed ";
+import Ongoing from "./components/Profilepage/Ongoing";
+import Remaining from "./components/Profilepage/Remaining";
 function App() {
   return (
 <>
@@ -23,7 +26,10 @@ function App() {
           <Route path="/landingPage" element={<LandingPage />} />
           {/*<Route path="/projectUpload" element={<ProjectUpload />} />*/}
           <Route path="/ProjectDetails" element={<ProjectDetails title="Plagarism Detection"/>} />
-          <Route path="/ProfilePage" element={<Profilepage />} />
+          <Route path="/ProfilePage" element={<div><Profilepage/><Completed/></div>} />
+          <Route path='/ProfilePage/Completed' element={<div><Profilepage/><Completed/></div>}></Route>
+       <Route path="/ProfilePage/Ongoing" element={<div><Profilepage/><Ongoing/></div>}></Route>
+       <Route path="/ProfilePage/Remaining" element={<div><Profilepage/><Remaining/></div>}></Route>
         </Routes>
       </Router>
 </>

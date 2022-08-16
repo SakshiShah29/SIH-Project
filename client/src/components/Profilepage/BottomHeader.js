@@ -1,5 +1,5 @@
 import React from 'react'
-import {NavLink} from "react-router-dom"
+import {Link} from "react-router-dom"
 import classes from "./BottomHeader.module.css"
 function BottomHeader() {
   return (
@@ -7,13 +7,13 @@ function BottomHeader() {
     <nav>
       <ul>
         <button>
-        <NavLink activeClassName={classes.active} to="/Completed"><h4>Completed</h4></NavLink>
+        <Link  to="/ProfilePage/Completed"><h4>Completed</h4></Link>
         </button>
         <button>
-        <NavLink activeClassName={classes.active} to="/Ongoing"><h4>Ongoing</h4></NavLink>
+        <Link  to="/ProfilePage/Ongoing"><h4>Ongoing</h4></Link>
         </button>
         <button>
-        <NavLink activeClassName={classes.active} to="/Remaining"><h4>Remaining</h4></NavLink>
+        <Link  to="/ProfilePage/Remaining"><h4>Remaining</h4></Link>
         </button>
       </ul>
     </nav>

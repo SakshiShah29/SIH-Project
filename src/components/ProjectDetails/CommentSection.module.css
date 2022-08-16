@@ -1,3 +1,5 @@
+
+
 .comments {
     margin-top: 20px;
   }
@@ -71,8 +73,10 @@ color:#fff;
   .comment {
     display: flex;
     padding-left:18px;
-    border: 6px solid #684BFE;
     border-radius: 15px;
+background: #2B3566;
+box-shadow: inset 35px 35px 70px #1a203d,
+            inset -35px -35px 70px #3c4a8f;
     margin-bottom: 18px;
     width:90%;
  margin-left: 28px;

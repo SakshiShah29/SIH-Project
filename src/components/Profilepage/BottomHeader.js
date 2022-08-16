@@ -7,13 +7,13 @@ function BottomHeader() {
     <nav>
       <ul>
         <button>
-        <NavLink activeClassName={classes.active} to="/Completed"><h3>Completed</h3></NavLink>
+        <NavLink activeClassName={classes.active} to="/Completed"><h4>Completed</h4></NavLink>
         </button>
         <button>
-        <NavLink activeClassName={classes.active} to="/Ongoing"><h3>Ongoing</h3></NavLink>
+        <NavLink activeClassName={classes.active} to="/Ongoing"><h4>Ongoing</h4></NavLink>
         </button>
         <button>
-        <NavLink activeClassName={classes.active} to="/Remaining"><h3>Remaining</h3></NavLink>
+        <NavLink activeClassName={classes.active} to="/Remaining"><h4>Remaining</h4></NavLink>
         </button>
       </ul>
     </nav>

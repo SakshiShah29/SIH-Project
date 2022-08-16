@@ -5,11 +5,9 @@ import upload from '../../images/upload-image.png'
 import attach from '../../images/attach.png'
 import imgSection from '../../images/img-section.png'
 import cross from '../../images/cross.png'
-const ProjectUpload = () => {
 
-
-
-
+const UploadProject = () => {
+ 
     const handleStatusChange = () => {
         if (document.querySelector('#OnGoing').checked) {
             document.querySelector('.upload-project-area').classList.add('d-none')
@@ -107,4 +105,4 @@ const ProjectUpload = () => {
     )
 }
 
-export default ProjectUpload
+export default UploadProject

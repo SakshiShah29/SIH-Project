@@ -4,13 +4,13 @@ import User from "./User"
 import Details from "./Details"
 import classes from "./Navbar.module.css";
 import Button from './Button';
-const Navbar=()=>{
+const Navbar=(props)=>{
   return (
     <div className={classes.navbar}>
     <User />
     <Details username="Chris Porter" institute="institute" branch="branch" interests="interests" description="description"/>
     <div className={classes.btn}>
-<Button>Upload Project</Button>
+<Button onClick={props.onClick}>Upload Project</Button>
     </div>
     
     </div>

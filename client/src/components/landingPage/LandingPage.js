@@ -24,7 +24,7 @@ const LandingPage = () => {
         <>
             {isLogin && <LoginModal onLogin={loginHandler} />}
             <div className="navbar">
-                <div className="logo">
+                <div className="logo"> 
                     <p>Sahayog</p>
                 </div>
                 <div className="menu-items">

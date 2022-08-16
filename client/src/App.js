@@ -16,6 +16,7 @@ import ProjectDetails from './components/ProjectDetails/ProjectDetails';
 import Completed from "./components/Profilepage/Completed ";
 import Ongoing from "./components/Profilepage/Ongoing";
 import Remaining from "./components/Profilepage/Remaining";
+import UploadProject from "./components/UploadProject/UploadProject";
 function App() {
   return (
 <>
@@ -30,6 +31,7 @@ function App() {
           <Route path='/ProfilePage/Completed' element={<div><Profilepage/><Completed/></div>}></Route>
        <Route path="/ProfilePage/Ongoing" element={<div><Profilepage/><Ongoing/></div>}></Route>
        <Route path="/ProfilePage/Remaining" element={<div><Profilepage/><Remaining/></div>}></Route>
+       <Route path="/UpladProject" element={<UploadProject/>}></Route>
         </Routes>
       </Router>
 </>

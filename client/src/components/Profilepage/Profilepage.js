@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import UploadProjectModal from '../Modals/UploadProjectModal';
 
 // import { Route, Router, Routes } from "react-router-dom"
 import BottomHeader from "./BottomHeader"
@@ -7,9 +8,19 @@ import MainHeader from './MainHeader'
 // import Ongoing from './Ongoing'
 // import Remaining from './Remaining'
 const Profilepage = () => {
+ 
+    const [upload, setUpload] = useState(false);
+    const showUploadPage = () => {
+        setUpload(true)
+    };
+
+    const dontShowUpload = () => {
+        setUpload(false);
+    }
   return (
     <div>
-      <MainHeader />
+    {upload && <UploadProjectModal onClick={dontShowUpload} />}
+      <MainHeader onClick={showUploadPage}/>
       <BottomHeader />
     
     </div>

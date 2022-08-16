@@ -12,7 +12,7 @@ function MainHeader(props) {
           <Link to="/"><a><img src={arrow}></img></a></Link>
           <Link to="/landingPage"><Logout/></Link>
         </div>
-        <Navbar />
+        <Navbar onClick={props.onClick}/>
       </div>
     </Fragment>
   );

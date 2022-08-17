@@ -17,6 +17,7 @@ import Completed from "./components/Profilepage/Completed ";
 import Ongoing from "./components/Profilepage/Ongoing";
 import Remaining from "./components/Profilepage/Remaining";
 import UploadProject from "./components/UploadProject/UploadProject";
+import Chat from "./components/Chat/Chat";
 function App() {
   return (
 <>
@@ -32,7 +33,7 @@ function App() {
        <Route path="/ProfilePage/Ongoing" element={<div><Profilepage/><Ongoing/></div>}></Route>
        <Route path="/ProfilePage/Remaining" element={<div><Profilepage/><Remaining/></div>}></Route>
        <Route path="/UpladProject" element={<UploadProject/>}></Route>
-       
+       <Route path="/Chat" element={<Chat/>}></Route>
         </Routes>
       </Router>
 </>

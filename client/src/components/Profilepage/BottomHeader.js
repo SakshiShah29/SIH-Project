@@ -7,13 +7,13 @@ function BottomHeader() {
     <nav>
       <ul>
         <button>
-        <Link  to="/ProfilePage/Completed"><h4>Completed</h4></Link>
+        <Link  to="/ProfilePage/Completed"><p>Completed</p></Link>
         </button>
         <button>
-        <Link  to="/ProfilePage/Ongoing"><h4>Ongoing</h4></Link>
+        <Link  to="/ProfilePage/Ongoing"><p>Ongoing</p></Link>
         </button>
         <button>
-        <Link  to="/ProfilePage/Remaining"><h4>Remaining</h4></Link>
+        <Link  to="/ProfilePage/Remaining"><p>Remaining</p></Link>
         </button>
       </ul>
     </nav>

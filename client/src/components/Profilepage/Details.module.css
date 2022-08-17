@@ -1,11 +1,11 @@
 h2{
     
-font-style: normal;
+
 font-weight: 600;
 font-size: 30px;
 line-height: 40px;
 color: #FFFFFF;
-
+padding-left: 10px;
 }
 .upper{
     display: flex;
@@ -23,12 +23,14 @@ color: #FFFFFF;
 }
 h4{
     
-    font-style: normal;
-    
+
+    font-family: var(--bs-body-font-family);
     font-size: 18px;
-    line-height: 16px;
+    line-height: 21px;
     color: #FFFFFF;
-    
+    overflow-y: hidden;
+    justify-content: flex-start;
+    padding-left: 10px;
     }
 .details{
     position:relative;

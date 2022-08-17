@@ -13,10 +13,13 @@ const Profilepage = () => {
     const handleUploadProject=()=>{
       navigate("/UpladProject")
     }
+    const handleMessage=()=>{
+      navigate("/Chat")
+    }
   return (
     <div>
     
-      <MainHeader onClick={handleUploadProject}/>
+      <MainHeader onClick={handleUploadProject} onMessage={handleMessage}/>
       <BottomHeader />
     
     </div>

@@ -10,6 +10,7 @@ const Navbar=(props)=>{
     <User />
     <Details username="Chris Porter" institute="institute" branch="branch" interests="interests" description="description"/>
     <div className={classes.btn}>
+    <Button onClick={props.onMessage}>Message</Button>
 <Button onClick={props.onClick}>Upload Project</Button>
     </div>
     

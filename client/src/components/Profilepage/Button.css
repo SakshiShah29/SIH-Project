@@ -4,10 +4,10 @@
     background-color: #684BFE;
     padding: 0.4rem 1.5rem;
     border-color: transparent;
-    border-radius: 10px;
-    font-size: 1.3rem;
+    border-radius: 8px;
+    font-size: 1rem;
     font-weight: 500;
-    margin-top:90px;
+    margin-top:30px;
 }
 .buttons:hover{
     background-color: #694bfea6;

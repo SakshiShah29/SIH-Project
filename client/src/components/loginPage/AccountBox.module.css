@@ -1,10 +1,10 @@
 .boxcontainer{
-    width:480px;
-    min-height:650px;
+    width:550px;
+    min-height:200px;
     display:flex;
     flex-direction: column;
-    border-radius: 19px;
-    background-color: #111634;
+    border-radius: 15px;
+    background-color: #2B3566;
     box-shadow: 0 0 2px rgba(15,15,15,0.28);
     position: relative;
     overflow: hidden;
@@ -17,21 +17,11 @@
     display: flex;
     flex-direction: column;
     border-radius: 50%;
-    top:-300px;
-    left:-140px;
+ 
     background: rgba(104,75,254,1);
     
 }
 
-.topcontainer{
-    width:100%;
-    height:250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding:0 1.8em;
-    padding-bottom:5em ;
-}
 
 .headercontainer{
     width:100%;
@@ -39,17 +29,7 @@
     flex-direction: column;
 }
 
-.headertext{
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 1.24;
-    color:#fff;
-    z-index: 30;
-    margin:0;
-    display: flex;
-    justify-content: space-around;
-   
-}
+
 
 h4{
     color:#fff;
@@ -62,8 +42,42 @@ h4{
 }
 
 .innercontainer{
-    width:100%;
+    width:90%;
     display:flex;
     flex-direction: column;
-    padding: 0 1.8em;
+   padding-left: 4em;;
+   padding-top: 4em;
+}
+.top{
+    display: flex;
+    width: 100%;
+    height:70px;
+}
+
+.student{
+    width:50%;
+    text-decoration: none;
+    font-size: 18px;
+    color:#fff;
+    padding-left: 5em;
+    padding-top: 1em;
+    background-color: #684BFE;
+}
+.student:hover{
+    color:#fff;
+}
+.admin{
+    width:50%;
+    text-decoration: none;
+    font-size: 18px;
+    color:#fff;
+    padding-left: 5em;
+    padding-top: 1em;
+}
+.admin:hover{
+    background-color: #684BFE;
+    color:#fff;
+}
+.admin:focus{
+    background-color: #684BFE;
 }

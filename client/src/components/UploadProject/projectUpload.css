@@ -1,6 +1,7 @@
 
 .project-upload{
-    margin-top: 1rem;
+
+    background-color: #111634;;
 }
 .cumpulsory{
     color: red;
@@ -8,6 +9,9 @@
 .project-upload > h1{
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    color:#fff;
+    overflow-y: hidden;
 }
 .input-project-upload{
     display: inline;
@@ -17,7 +21,7 @@
     border: none;
     margin-right: 2rem;
     padding: 1rem 0.5rem;
-    background: #232B53;
+    background: #2B3566;
     border-radius: 8px;
     color: #fff;
 
@@ -29,8 +33,9 @@
   }
 .label-project-upload{
     display: block;
-    font-weight: 300;
+    font-weight: 500;
     margin-bottom: 0.5rem;
+    color: #fff;
 }
 .tech-stacks , .domain-stack{
     border: 1px solid #684BFE;
@@ -57,6 +62,7 @@
 }
 .image-content{
     margin-top: 0.8rem;
+    color: #fff;
 }
 .image-stack {
     position: relative;

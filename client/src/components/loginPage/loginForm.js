@@ -3,7 +3,7 @@ import { useQuery, useMutation } from "react-query";
 import { AccountContext } from "./accountContext";
 import { useNavigate } from "react-router-dom";
 import classes from "./Login.module.css";
-
+import google from "../../images/google.png"
 import { Marginer } from "./marginer";
 function Loginform(props) {
   const [data, setData] = useState({ email: "None", password: "None" });
@@ -59,8 +59,7 @@ function Loginform(props) {
 
   return (
     <div className={classes.boxcontainer}>
-      <img className={classes.image}></img>
-      <Marginer direction="vertical" margin="3em" />
+
       <form className={classes.formcontainer}>
         <input
           className={classes.inputcontainer}
@@ -81,26 +80,27 @@ function Loginform(props) {
           }}
         />
       </form>
-      <Marginer direction="vertical" margin={10} />
+   
       <a className={classes.mutedlink} href="#">
         Forget your password?
       </a>
       <Marginer direction="vertical" margin="2em" />
       <button
-        className={classes.submitbutton}
+        className={classes.submitbutton1}
         type="submit"
         onClick={Submitted}
       >
         Login
       </button>
-      <Marginer direction="vertical" margin="2em" />
-      <a className={classes.mutedlink} href="#">
-        Dont have an account?{" "}
-        <a className={classes.boldlink} onClick={switchToSignup} href="#">
-          Signup
-        </a>
-      </a>
       <Marginer direction="vertical" margin="1em" />
+      <button
+        className={classes.submitbutton2}
+        type="submit"
+        onClick={Submitted}
+      >
+        <img src={google}></img> Connect with Google
+      </button>
+      <Marginer direction="vertical" margin="2em" />
     </div>
   );
 }

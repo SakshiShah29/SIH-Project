@@ -32,6 +32,7 @@ function App() {
        <Route path="/ProfilePage/Ongoing" element={<div><Profilepage/><Ongoing/></div>}></Route>
        <Route path="/ProfilePage/Remaining" element={<div><Profilepage/><Remaining/></div>}></Route>
        <Route path="/UpladProject" element={<UploadProject/>}></Route>
+       
         </Routes>
       </Router>
 </>

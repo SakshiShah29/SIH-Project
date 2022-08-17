@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import UploadProjectModal from '../Modals/UploadProjectModal';
+import { useNavigate } from 'react-router-dom'
+
 
 // import { Route, Router, Routes } from "react-router-dom"
 import BottomHeader from "./BottomHeader"
@@ -8,19 +9,14 @@ import MainHeader from './MainHeader'
 // import Ongoing from './Ongoing'
 // import Remaining from './Remaining'
 const Profilepage = () => {
- 
-    const [upload, setUpload] = useState(false);
-    const showUploadPage = () => {
-        setUpload(true)
-    };
-
-    const dontShowUpload = () => {
-        setUpload(false);
+ const navigate=useNavigate();
+    const handleUploadProject=()=>{
+      navigate("/UpladProject")
     }
   return (
     <div>
-    {upload && <UploadProjectModal onClick={dontShowUpload} />}
-      <MainHeader onClick={showUploadPage}/>
+    
+      <MainHeader onClick={handleUploadProject}/>
       <BottomHeader />
     
     </div>

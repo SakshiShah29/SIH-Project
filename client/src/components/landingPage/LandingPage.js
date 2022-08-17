@@ -11,8 +11,10 @@ import post5 from '../../images/post-5.svg'
 import Footer from './footer'
 
 import LoginModal from '../Modals/LoginModal'
+import SignupModal from '../Modals/SignupModal'
 const LandingPage = () => {
     const [isLogin, setIsLogin] = useState(false);
+    const [isSignup,setIsSignup]=useState(false);
     const showLoginPage = () => {
         setIsLogin(true)
     };
@@ -20,16 +22,25 @@ const LandingPage = () => {
     const loginHandler = () => {
         setIsLogin(false);
     }
+
+    const showSignUp=()=>{
+        setIsSignup(true);
+    }
+
+    const signupHandler=()=>{
+        setIsSignup(false)
+    }
     return (
         <>
             {isLogin && <LoginModal onLogin={loginHandler} />}
+            {isSignup && <SignupModal onSignup={signupHandler}/>}
             <div className="navbar">
                 <div className="logo"> 
                     <p>Sahayog</p>
                 </div>
                 <div className="menu-items">
                     <button onClick={showLoginPage} className="btn-landingPage">Login</button>
-                    <button className="btn-outline-landingPage">Sign Up</button>
+                    <button onClick={showSignUp} className="btn-outline-landingPage">Sign Up</button>
                 </div>
             </div>
             <div className="landing-page d-flex flex-column justify-content-center align-items-center pt-5">

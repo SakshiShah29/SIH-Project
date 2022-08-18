@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 // import getWeb3 from "./getWeb3";
 // import Web3 from "web3";
-import classes from "./Login.module.css"
+import classes from "./Login.module.css";
 import { useQuery } from "react-query";
-import { classicNameResolver } from "typescript";
 import { Marginer } from "./marginer";
-
 
 export default function Adminlogin() {
   let [address, setaddress] = useState("");
@@ -247,14 +245,19 @@ export default function Adminlogin() {
 
   return (
     <div>
-      {!exists &&<button className={classes.submitbutton1} onClick={connectwallet}>Connect to the wallet</button>}
-      <Marginer direction="vertical" margin="1em"/>
+      {!exists && (
+        <button className={classes.submitbutton1} onClick={connectwallet}>
+          Connect to the wallet
+        </button>
+      )}
+      <Marginer direction="vertical" margin="1em" />
       {exists && (
         <div>
           <p>{walletaddress}</p>
           <p>{walletbalance}</p>
-         
-          <input className={classes.inputcontainer}
+
+          <input
+            className={classes.inputcontainer}
             type={"password"}
             value={privatekey}
             placeholder="Enter your private key"
@@ -263,8 +266,8 @@ export default function Adminlogin() {
             }}
           ></input>
           <div>
-           
-            <input className={classes.inputcontainer}
+            <input
+              className={classes.inputcontainer}
               value={path}
               placeholder="Enter the path of desktop"
               onChange={(e) => {
@@ -274,7 +277,9 @@ export default function Adminlogin() {
             ;
           </div>
 
-          <button className={classes.submitbutton1} onClick={login}>Login</button>
+          <button className={classes.submitbutton1} onClick={login}>
+            Login
+          </button>
         </div>
       )}
       {pending && <Showevent />}

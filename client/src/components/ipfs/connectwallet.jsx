@@ -5,6 +5,9 @@ import React, {
   useContext,
   createContext,
 } from "react";
+import { Marginer } from "../loginPage/marginer";
+
+import classes from "./connectWallet.module.css"
 // import getWeb3 from "./getWeb3";
 
 import Context from "./context";
@@ -72,14 +75,19 @@ export default function Wallet() {
 
   function WalletConnect() {
     return (
-      <div>
+      <div className={classes.bg}>
+      <div className={classes.boxcontainer}>
+      <Marginer direction="vertical" margin="1em" />
         <h1>Hello Student</h1>
-        <button onClick={connectwallet}>Connect to the wallet</button>
+        <Marginer direction="vertical" margin="1em" />
+        <button className={classes.submitbutton1} onClick={connectwallet}>Connect wallet</button>
         {exists && (
           <div>
             <p>{walletaddress}</p>
           </div>
+          
         )}
+      </div>
       </div>
     );
   }

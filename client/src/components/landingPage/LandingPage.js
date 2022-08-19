@@ -12,6 +12,9 @@ import Footer from './footer'
 
 import LoginModal from '../Modals/LoginModal'
 import SignupModal from '../Modals/SignupModal'
+
+
+
 const LandingPage = () => {
     const [isLogin, setIsLogin] = useState(false);
     const [isSignup,setIsSignup]=useState(false);
@@ -31,7 +34,8 @@ const LandingPage = () => {
         setIsSignup(false)
     }
     return (
-        <>
+        < >
+       
             {isLogin && <LoginModal onLogin={loginHandler} />}
             {isSignup && <SignupModal onSignup={signupHandler}/>}
             <div className="navbar">
@@ -43,6 +47,7 @@ const LandingPage = () => {
                     <button onClick={showSignUp} className="btn-outline-landingPage">Sign Up</button>
                 </div>
             </div>
+           
             <div className="landing-page d-flex flex-column justify-content-center align-items-center pt-5">
 
                 <CardLandingPage onClick={showLoginPage} imageName={vsCodeVariable} />
@@ -55,7 +60,9 @@ const LandingPage = () => {
                 <CardLandingPage onClick={showLoginPage} imageName={post5} />
 
             </div>
+           
             <Footer />
+            
         </>
     )
 }

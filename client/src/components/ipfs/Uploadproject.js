@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-
+import connectWallet from "./connectwallet";
 import Context from "./context";
 import ImagesUpload from "../imagesupload/DragAndDrop";
 import Ipfs from "./Ipfs";
@@ -164,6 +164,7 @@ export default function Uploadproject() {
               </label>
             </div>
           </div>
+          <connectWallet/>
           <div className="mb-3">
             <label className="label-project-upload">
               Private Key <span className="cumpulsory">*</span>

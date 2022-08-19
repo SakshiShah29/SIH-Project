@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import classes from "./Login.module.css";
 import google from "../../images/google.png"
 import { Marginer } from "./marginer";
+import 'react-toastify/dist/ReactToastify.css';
+import {ToastContainer,toast} from "react-toastify";
 function Loginform(props) {
   const [data, setData] = useState({ email: "None", password: "None" });
   const [email, setEmail] = useState("");
@@ -38,13 +40,17 @@ function Loginform(props) {
     console.log("Now the cookie is going to be assigned");
     document.cookie = `jwt=${res.token};max-age=1800;`;
     if (res.error) {
-      alert(res.error);
+      toast.error(res.error , {
+        position: toast.POSITION.BOTTOM_LEFT
+      });
     } else {
       //This means that no error has occured in the response object and the sign up is done completely
       //Hence we can see the token of the user
       console.log(res.Connection);
       console.log();
-      alert("The user has been logged in successfully");
+      toast.success("Login Successfull!" , {
+        position: toast.POSITION.BOTTOM_LEFT
+      });
       navigate("/");
 
       //At this stage just route the user to the home page of the application
@@ -101,6 +107,7 @@ function Loginform(props) {
         <img src={google}></img> Connect with Google
       </button>
       <Marginer direction="vertical" margin="2em" />
+      <ToastContainer/>
     </div>
   );
 }

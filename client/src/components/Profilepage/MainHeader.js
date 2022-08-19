@@ -21,6 +21,7 @@ function MainHeader(props) {
         </div>
         <Navbar
           onClick={props.onClick}
+          onEdit={props.onEdit}
           onMessage={props.onMessage}
           username={name}
           institute={institute}

@@ -35,7 +35,7 @@ function Details(props) {
     <div className={classes.details}>
       <div className={classes.upper}>
         <h2>{props.username}</h2>
-        <img src={edit} onClick={updatedata}></img>
+        <img src={edit} onClick={props.onEdit}></img>
       </div>
       <h4>{props.institute}</h4>
       <h4>{props.branch}</h4>

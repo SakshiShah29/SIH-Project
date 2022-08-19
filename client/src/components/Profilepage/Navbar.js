@@ -16,6 +16,7 @@ const Navbar = (props) => {
         interests={interests}
         description={description}
         id={id}
+        onEdit={props.onEdit}
       />
       <div className={classes.btn}>
         <Button onClick={props.onMessage}>Message</Button>

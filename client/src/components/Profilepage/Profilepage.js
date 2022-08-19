@@ -1,10 +1,12 @@
 import React, { useState, useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useQuery } from "react-query";
-
+import {ToastContainer, toast} from "react-toastify"
 // import { Route, Router, Routes } from "react-router-dom"
 import BottomHeader from "./BottomHeader";
 import MainHeader from "./MainHeader";
+import EditProfile from "./EditProfile";
+import EditProfileModal from "../Modals/EditProfileModal";
 // import Completed from './Completed '
 // import Ongoing from './Ongoing'
 // import Remaining from './Remaining'
@@ -12,11 +14,20 @@ import MainHeader from "./MainHeader";
 let idglobal;
 let jwtglobal;
 const Profilepage = () => {
+  const [profileEdit,setProfileEdit]=useState(false)
   let id = useRef();
   let jwtfinal = useRef();
   let userdata = useRef();
   let userdata2 = useRef();
   const navigate = useNavigate();
+ 
+  const editProfileHandler=()=>{
+    setProfileEdit(false)
+  }
+
+  const showEditProfile=()=>{
+    setProfileEdit(true)
+  }
 
   function onClick() {
     navigate("/UploadProject");
@@ -121,13 +132,15 @@ const Profilepage = () => {
   //This means that there is no error while the data is returned from the backend and that the data can be displayed to the UI
 
   const handleUploadProject = () => {
-    navigate("/UpladProject");
+    navigate("/UploadProject");
   };
   const handleMessage = () => {
     navigate("/Chat");
   };
   return (
     <div>
+    {profileEdit && <EditProfileModal onClose={editProfileHandler}
+    closeEditProfile={editProfileHandler}/>}
       <MainHeader
         name={userdata.current.Name}
         institute={userdata.current.Institute}
@@ -135,7 +148,9 @@ const Profilepage = () => {
         interests={["Dummy data", "Dummy data"]}
         description={"Hello this is my description"}
         id={id}
-        onClick={onClick}
+        onClick={handleUploadProject}
+        onMessage={handleMessage}
+        onEdit={showEditProfile}
       />
       <BottomHeader id={idglobal} />
     </div>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 // import getWeb3 from "./getWeb3";
 // import Web3 from "web3";
-import classes from "./Login.module.css";
+
 import { useQuery } from "react-query";
-import { Marginer } from "./marginer";
+import os from "os";
 
 export default function Adminlogin() {
   let [address, setaddress] = useState("");
@@ -102,10 +102,10 @@ export default function Adminlogin() {
     );
 
     if (isLoading) {
-      return <div>The data is still loading in display project part</div>;
+      return <div>The data is still loading</div>;
     }
 
-    console.log(data, "This is the project details");
+    console.log(data);
 
     return (
       <div>
@@ -158,10 +158,6 @@ export default function Adminlogin() {
     let [shown, setshown] = useState(true);
     let [title, settitle] = useState();
     let [abstract, setabstract] = useState();
-    console.log(
-      "This is the wallet address of the admin that was passed to the backend"
-    );
-    console.log(walletaddress);
     let { isLoading, data } = useQuery(
       "adminevents",
       () =>
@@ -184,7 +180,7 @@ export default function Adminlogin() {
     //Now data.data is an array which contains all the pending requests
     //From the data.data there is a key which is projectid we fetch the project details from the ids
     //For that we use the concept of react query
-    console.log(data, "This is the data for the project details");
+    console.log(data);
 
     return data.data.map((ele) => {
       return <DisplayProject obj={ele} />;
@@ -249,31 +245,26 @@ export default function Adminlogin() {
 
   return (
     <div>
-      {!exists && (
-        <button className={classes.submitbutton1} onClick={connectwallet}>
-          Connect to the wallet
-        </button>
-      )}
-      <Marginer direction="vertical" margin="1em" />
+      <button onClick={connectwallet}>Connect to the wallet</button>
       {exists && (
         <div>
           <p>{walletaddress}</p>
           <p>{walletbalance}</p>
-
+          <label>Enter your private key</label>
           <input
-            className={classes.inputcontainer}
             type={"password"}
             value={privatekey}
-            placeholder="Enter your private key"
             onChange={(e) => {
               setprivatekey(e.target.value);
             }}
           ></input>
           <div>
+            <label>
+              Enter the path of the Desktop before checking for plagiarism
+            </label>
+            ;
             <input
-              className={classes.inputcontainer}
               value={path}
-              placeholder="Enter the path of desktop"
               onChange={(e) => {
                 setpath(e.target.value);
               }}
@@ -281,9 +272,7 @@ export default function Adminlogin() {
             ;
           </div>
 
-          <button className={classes.submitbutton1} onClick={login}>
-            Login
-          </button>
+          <button onClick={login}>Login</button>
         </div>
       )}
       {pending && <Showevent />}

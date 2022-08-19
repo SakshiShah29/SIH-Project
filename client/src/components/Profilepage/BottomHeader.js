@@ -1,18 +1,37 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useQuery } from "react-query";
 import classes from "./BottomHeader.module.css";
 import Completed from "./Completed ";
 import Ongoing from "./Ongoing";
 import Remaining from "./Remaining";
 function BottomHeader(props) {
-  console.log(
-    "These are the props that are passed to the bottom header component from the ProfilePage component"
-  );
   const [completed, setcompleted] = useState(true);
   const [ongoing, setongoing] = useState(false);
   const [pending, setpending] = useState(false);
-  console.log(props);
   let { id } = props;
+
+  console.log(id);
+
+  //Now based on the id that is available with us we find the data for the completed pending and ongoing projects
+  let { isLoading, data, isError } = useQuery(`${id}`, () =>
+    fetch(`http://localhost:3001/api/student/profile/${id}`, {
+      headers: {
+        jwt: "Not required",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => data)
+  );
+
+  if (isLoading) {
+    return <div>The data is still loading..</div>;
+  }
+
+  console.log(
+    "This is the data for the profile that was passed from the backend component"
+  );
+  console.log(data);
 
   function btno() {
     setcompleted(false);
@@ -55,9 +74,9 @@ function BottomHeader(props) {
         </nav>
       </header>
       <div>
-        {completed && <Completed id={id} />}
-        {pending && <Remaining id={id} />}
-        {ongoing && <Ongoing id={id} />}
+        {completed && <Completed projects={data.data.completed_projects} />}
+        {pending && <Remaining projects={data.data.pending_projects} />}
+        {ongoing && <Ongoing projects={data.data.ongoing_projects} />}
       </div>
     </>
   );

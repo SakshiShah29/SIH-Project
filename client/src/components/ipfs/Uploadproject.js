@@ -5,6 +5,7 @@ import ImagesUpload from "../imagesupload/DragAndDrop";
 import Ipfs from "./Ipfs";
 import Navbar from "../Navbar/Navbar";
 import "./uploadproject.css";
+import MultipleSelectChip from "../Profilepage/MultipleSelectChip";
 export default function Uploadproject() {
   let obj = useContext(Context);
 
@@ -108,6 +109,7 @@ export default function Uploadproject() {
               onChange={(e) => {
                 setabstract(e.target.value);
               }}
+              required
             />
           </div>
           <div className="mb-3">
@@ -115,15 +117,10 @@ export default function Uploadproject() {
               Technology Stack <span className="cumpulsory">*</span>
             </label>
             <div className="stack-details d-flex mb-1"></div>
-            <input
-              type="text"
-              className="input-project-upload"
-              placeholder="Technology Stack of your project"
-              value={techstack}
-              onChange={(e) => {
-                settechstack(e.target.value);
-              }}
-            />
+            <MultipleSelectChip value={techstack} onChange={(e)=>{settechstack(e.target.value)}}/>
+
+            
+
           </div>
           <div className="mb-5">
             <label className="label-project-upload">Other Creators</label>
@@ -210,3 +207,13 @@ export default function Uploadproject() {
 {
   /* <button onClick={projectsubmitted}>Submit the details</button> */
 }
+
+// <input
+//               type="text"
+//               className="input-project-upload"
+//               placeholder="Technology Stack of your project"
+//               value={techstack}
+//               onChange={(e) => {
+//                 settechstack(e.target.value);
+//               }}
+//             />

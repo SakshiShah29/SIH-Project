@@ -1,4 +1,11 @@
 const express = require("express");
+const fs = require("fs");
+
+var data = fs.readFileSync(
+  "C:/Users/Bhaskar/Desktop/SIH-clone/SIH-Project/Data.json"
+);
+var myObject = JSON.parse(data);
+console.log(myObject, "This is the data file");
 
 const uploadrouter = express.Router();
 
@@ -52,6 +59,12 @@ uploadrouter.post(
     console.log("This is the body that was returned from the frontend");
     console.log(req.body);
 
+    var datajson = fs.readFileSync(
+      "C:/Users/Bhaskar/Desktop/SIH-clone/SIH-Project/Data.json"
+    );
+    var myObject = JSON.parse(datajson);
+    console.log(myObject, "This is the data file");
+
     // const myimage = await fs.readFileSync(
     //   `./projectuploads/${req.file.filename}`
     // );
@@ -71,6 +84,18 @@ uploadrouter.post(
     //   }
     // );
 
+    console.log("This is the lead profile id");
+    console.log(req.body.obj.current.profileid);
+    console.log(req.body.collaborators);
+    //Now from this leadprofile id we are going to find the university of the lead
+    let data = await Signup.findById(req.body.obj.current.profileid);
+    console.log("This is the data for the student signup");
+    console.log(data);
+    let leaduniversity = data.Institute;
+    let _leaddomain = data.Domains_of_interest;
+    console.log(leaduniversity);
+    console.log(_leaddomain);
+
     //Now as we have the body available with us let us upload the project on the database
     //Once the project is uploaded to the database the next step is to trigger the event so that the project is now available to admin
     await Uploadproject.create(
@@ -83,6 +108,8 @@ uploadrouter.post(
         leadaccountaddress: req.body.obj.current.useraddress,
         leadprofileid: req.body.obj.current.profileid,
         adminaddress: req.body.obj.current.admin,
+        university: leaduniversity,
+        leaddomain: _leaddomain,
       },
       (err, data) => {
         if (err) {
@@ -90,6 +117,19 @@ uploadrouter.post(
         } else {
           console.log("This is the data that is returned");
           console.log(data);
+          //Now we also append the data to the Data.json file
+          myObject.push(data);
+          var newData = JSON.stringify(myObject);
+          fs.writeFile(
+            "C:/Users/Bhaskar/Desktop/SIH-clone/SIH-Project/client/src/components/Data.json",
+            newData,
+            (err) => {
+              // error checking
+              if (err) throw err;
+
+              console.log("New data added");
+            }
+          );
           //Now the data for the project is stored in the database
           console.log(
             "The project is completed or not?",

@@ -77,6 +77,14 @@ const UploadSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  university: {
+    type: String,
+    required: true,
+  },
+  leaddomain: {
+    type: String,
+    required: true,
+  },
 });
 
 const UploadModel = new mongoose.model("Projectupload", UploadSchema);

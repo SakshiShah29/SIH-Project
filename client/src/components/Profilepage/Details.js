@@ -7,8 +7,6 @@ function Details(props) {
   //From the props the user id should also be passed
   async function updatedata() {
     //This is the function which updates the data
-    alert("Ok update");
-
     //A pop up should open asking for which data you need to update
     //For now let us try updating some data
     let data = await fetch(

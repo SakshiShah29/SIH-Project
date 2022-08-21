@@ -1,7 +1,7 @@
 import React, { useState, useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useQuery } from "react-query";
-import {ToastContainer, toast} from "react-toastify"
+import { ToastContainer, toast } from "react-toastify";
 // import { Route, Router, Routes } from "react-router-dom"
 import BottomHeader from "./BottomHeader";
 import MainHeader from "./MainHeader";
@@ -14,20 +14,20 @@ import EditProfileModal from "../Modals/EditProfileModal";
 let idglobal;
 let jwtglobal;
 const Profilepage = () => {
-  const [profileEdit,setProfileEdit]=useState(false)
+  const [profileEdit, setProfileEdit] = useState(false);
   let id = useRef();
   let jwtfinal = useRef();
   let userdata = useRef();
   let userdata2 = useRef();
   const navigate = useNavigate();
- 
-  const editProfileHandler=()=>{
-    setProfileEdit(false)
-  }
 
-  const showEditProfile=()=>{
-    setProfileEdit(true)
-  }
+  const editProfileHandler = () => {
+    setProfileEdit(false);
+  };
+
+  const showEditProfile = () => {
+    setProfileEdit(true);
+  };
 
   function onClick() {
     navigate("/UploadProject");
@@ -139,14 +139,19 @@ const Profilepage = () => {
   };
   return (
     <div>
-    {profileEdit && <EditProfileModal onClose={editProfileHandler}
-    closeEditProfile={editProfileHandler}/>}
+      {profileEdit && (
+        <EditProfileModal
+          onClose={editProfileHandler}
+          closeEditProfile={editProfileHandler}
+          id={id}
+        />
+      )}
       <MainHeader
         name={userdata.current.Name}
         institute={userdata.current.Institute}
         branch={data.data.branch}
-        interests={["Dummy data", "Dummy data"]}
-        description={"Hello this is my description"}
+        interests={data.data.interests}
+        description={data.data.description}
         id={id}
         onClick={handleUploadProject}
         onMessage={handleMessage}

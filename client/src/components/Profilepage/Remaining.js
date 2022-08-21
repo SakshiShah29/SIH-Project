@@ -5,6 +5,7 @@ import Card from "./Card";
 let finaldataarray = [];
 
 const Remaining = (props) => {
+  let [done, setdone] = useState(false);
   let [datagot, setdatagot] = useState(false);
   //Inside the remaining projects we have passed the project id that is to be displayed
   // console.log("We are now inside the pending projects section");
@@ -26,6 +27,7 @@ const Remaining = (props) => {
             if (finaldataarray.length === arr.length) {
             } else {
               finaldataarray = [...finaldataarray, data.data];
+              setdone(true);
             }
           });
         // await console.log(_data);

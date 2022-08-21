@@ -1,13 +1,15 @@
-import React from 'react'
-import EditProfile from '../Profilepage/EditProfile'
+import React from "react";
+import EditProfile from "../Profilepage/EditProfile";
 import classes from "./LoginModal.module.css";
 const EditProfileModal = (props) => {
   return (
     <div>
-        <div className={classes.backdrop} onClick={props.onClose}></div>
-        <div className={classes.modal}><EditProfile closeEditProfile={props.closeEditProfile}/></div>
-        </div>
-  )
-}
+      <div className={classes.backdrop} onClick={props.onClose}></div>
+      <div className={classes.modal}>
+        <EditProfile closeEditProfile={props.closeEditProfile} id={props.id} />
+      </div>
+    </div>
+  );
+};
 
-export default EditProfileModal
+export default EditProfileModal;

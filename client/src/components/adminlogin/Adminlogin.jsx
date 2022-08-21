@@ -242,11 +242,10 @@ export default function Adminlogin() {
     //   });
     // }
   }
-
-  return (
-    <div>
-      <button onClick={connectwallet}>Connect to the wallet</button>
-      {exists && (
+  function ConnectWallet() {
+    <button onClick={connectwallet}>Connect to the wallet</button>;
+    {
+      exists && (
         <div>
           <p>{walletaddress}</p>
           <p>{walletbalance}</p>
@@ -274,7 +273,13 @@ export default function Adminlogin() {
 
           <button onClick={login}>Login</button>
         </div>
-      )}
+      );
+    }
+  }
+
+  return (
+    <div>
+      {!pending && <ConnectWallet />}
       {pending && <Showevent />}
     </div>
   );

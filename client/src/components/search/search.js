@@ -1,15 +1,19 @@
-import React from 'react'
-import './search.css'
-import filter from '../../images/filter.png'
+import React from "react";
+import "./search.css";
+import filter from "../../images/filter.png";
 const search = () => {
-    return (
+  return (
+    <div className="search-filter mb-5">
+      <input
+        id="search"
+        type="text"
+        placeholder="Search Your Project by typing the title Here"
+      />
+      <button className="button-filter">
+        <img src={filter} alt="" />
+      </button>
+    </div>
+  );
+};
 
-        <div className="search-filter mb-5">
-            <input id="search" type="text" placeholder="Search Your Project Here" />
-            <button className='button-filter'><img src={filter} alt="" /></button>
-        </div>
-
-    )
-}
-
-export default search
+export default search;

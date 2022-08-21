@@ -212,12 +212,36 @@ uploadrouter.get(
 //   next();
 // }
 
+//This is the route which returns the profile of the user based on the passed project id
+//This router also checks for the univerisity that the student is studying
+uploadrouter.get("/:id", async (req, res) => {
+  // console.log("This is the data that will be passed");
+  // console.log("This is the id that is passed in the params");
+  console.log(req.params.id);
+  let data = Uploadproject.find({ _id: req.params.id }, (err, data) => {
+    if (err) {
+      console.log(err);
+      res.json({
+        status: "Not Ok",
+        error: err,
+      });
+    }
+
+    // console.log("This is the data that was found", data[0]);
+    //This means that the data is successfull
+    res.json({
+      status: "Ok",
+      data: data[0],
+    });
+  });
+});
+
 //This is the route which receives the body and then it saves the data into the database
 async function authorized(req, res, next) {
-  console.log(
-    "This is the middleware which accepts the request object and verifies whether the student is authorized to acces this or not"
-  );
-  console.log(req.headers.jwt);
+  // console.log(
+  //   "This is the middleware which accepts the request object and verifies whether the student is authorized to acces this or not"
+  // );
+  // console.log(req.headers.jwt);
 
   if (req.headers.jwt == "undefined") {
     res.status(404).json({
@@ -227,8 +251,8 @@ async function authorized(req, res, next) {
   } else {
     //Now as the cookie is returned from the user the next step is to check whether the returned cookie is valid or not
     validcookie = await verifytoken(req.headers.jwt);
-    console.log("Yes the user is loggen in and has a cookie");
-    console.log(validcookie);
+    // console.log("Yes the user is loggen in and has a cookie");
+    // console.log(validcookie);
     // console.log("The data that is returned after verifying the token is");
     // console.log(validcookie);
   }

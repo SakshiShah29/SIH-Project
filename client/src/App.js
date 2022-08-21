@@ -32,7 +32,7 @@ function App() {
             element={
               <div>
                 <Profilepage />
-                <Completed />
+                {/* <Completed /> */}
               </div>
             }
           />

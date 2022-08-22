@@ -12,8 +12,13 @@ import Completed from "./components/Profilepage/Completed ";
 import Ongoing from "./components/Profilepage/Ongoing";
 import Remaining from "./components/Profilepage/Remaining";
 // import UploadProject from "./components/ipfs/UploadProject2";
-import Chat from "./components/Chat/Chat";
+// import Chat from "./components/Chat/Chat";
 import Wallet from "./components/ipfs/connectwallet";
+import Auth from "./components/Auth/Auth.jsx";
+import Chatapplication from "./components/Chatapplicationfinal/Chat.jsx";
+import Profileid from "./components/Chatapplication2/Profileid";
+import Chat from "./components/Chatapplication2/Chat";
+
 function App() {
   return (
     <>
@@ -21,12 +26,13 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          {/* <Route path="/Chat" element={<Chatapplication />} /> */}
+          {/* <Route path="/" element={<Chatapplication />} /> */}
+          {/* <Route path="/" element={<Chatlogin />} /> */}
           <Route path="/landingPage" element={<LandingPage />} />
           {/*<Route path="/projectUpload" element={<ProjectUpload />} />*/}
-          <Route
-            path="/ProjectDetails"
-            element={<ProjectDetails title="Plagarism Detection" />}
-          />
+          <Route path="/ProjectDetails" element={<ProjectDetails />} />
+          <Route path="/Chatprofile" element={<Chat />} />
           <Route
             path="/ProfilePage"
             element={
@@ -65,7 +71,7 @@ function App() {
           ></Route>
           <Route path="/UploadProject" element={<Wallet />}></Route>
           {/* <Route path="/UploadProject2" element={<UploadProject />}></Route> */}
-          <Route path="/Chat" element={<Chat />}></Route>
+          {/* <Route path="/Chat" element={<Chat />}></Route> */}
         </Routes>
       </Router>
     </>

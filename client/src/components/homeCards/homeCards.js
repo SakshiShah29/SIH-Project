@@ -1,26 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import "./homeCards.css";
 import { useNavigate } from "react-router-dom";
+import ProjectDetails from "../ProjectDetails/ProjectDetails";
 const HomeCards = (props) => {
+  const [cardclicked, setcardclicked] = useState(false);
+
+  let { rest } = props;
+  console.log(
+    rest,
+    "This is the card data that was passed from the home cards"
+  );
   const navigate = useNavigate();
   const handleProjectHomeCLick = () => {
-    navigate("/ProjectDetails");
+    // navigate("/ProjectDetails");
+    setcardclicked(true);
   };
   return (
     <>
-      <div className="homeCard" onClick={handleProjectHomeCLick}>
-        <span className="badge rounded-pill bg-color text-bg-primary">
-          Completed
-        </span>
-        <p className="cardTitle">{props.title}</p>
-        <p className="cardSubtitle">{props.university}</p>
-        <div className="tech-stack">
-          <p> Machine Learning</p>
-          <p> LSTM</p>
-          <p> Python</p>
-          <p> NLP</p>
+      {!cardclicked && (
+        <div className="homeCard" onClick={handleProjectHomeCLick}>
+          <span className="badge rounded-pill bg-color text-bg-primary">
+            Completed
+          </span>
+          <p className="cardTitle">{props.title}</p>
+          <p className="cardSubtitle">{props.university}</p>
+          <div className="tech-stack">
+            <p> Machine Learning</p>
+            <p> LSTM</p>
+            <p> Python</p>
+            <p> NLP</p>
+          </div>
         </div>
-      </div>
+      )}
+      {cardclicked && (
+        <ProjectDetails setcardclicked={setcardclicked} rest={rest} />
+      )}
     </>
   );
 };

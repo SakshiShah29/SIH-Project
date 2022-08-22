@@ -5,34 +5,45 @@ import CardUi from "./CardUi";
 import CommentSection from "./CommentSection";
 
 const ProjectDetails = (props) => {
+  let { setcardclicked, rest } = props;
+  console.log(
+    "This is the data that was passed from the cards to projectdetails",
+    rest
+  );
+
+  function btnclicked() {
+    alert(`This is the profile id of the lead ${rest.leadprofileid}`);
+  }
+
+  console.log(typeof setcardclicked);
+
+  console.log(props);
+
+  function backclicked() {
+    setcardclicked(false);
+  }
   return (
     <Fragment>
       <div>
         <Navbar />
       </div>
       <div className={classes.bottomContainer}>
-        <h3>{props.title}</h3>
+        <h3>{rest.title}</h3>
         <div className={classes.upper}>
           <div className={classes.details}>
+            <button onClick={backclicked}>Go back</button>
             <h4>Abstract</h4>
-            <p>
-              Cupidatat et dolor aute exercitation duis tempor pariatur est
-              consequat est aliqua non non. Amet cupidatat commodo laborum Lorem
-              ullamco labore amet eu fugiat cillum eu qui excepteur sit.
-              Consequat proident ipsum ipsum nostrud aliquip ad commodo ipsum
-              cillum aliquip amet in ea. Dolor minim id laboris sunt duis ipsum.
-              Aute aliquip magna cillum do aliquip anim exercitation. Dolore
-              dolore eu exercitation cillum culpa cupidatat culpa et aliquip
-              laborum irure adipisicing minim.
-            </p>
+            <p>{rest.abstract}</p>
           </div>
-          <CardUi />
+          <CardUi rest={rest} />
         </div>
         <div className={classes.centerButton}>
-        <button className={classes.btn}>Want to Collaborate?</button>
+          <button className={classes.btn} onClick={btnclicked}>
+            Want to Collaborate?
+          </button>
         </div>
         <div className={classes.comment}>
-        <CommentSection/>
+          <CommentSection />
         </div>
       </div>
     </Fragment>

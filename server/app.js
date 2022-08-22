@@ -20,6 +20,7 @@ const detectorrouter = require("./views/plagiarismdetection");
 const chatrouter = require("./views/ChatRoute");
 const messagerouter = require("./views/MessageRoute");
 const getrouter = require("./views/getrouter");
+const chatrouter2 = require("./views/chatapplication");
 // import ChatRoute from "./routes/ChatRoute.js";
 // import MessageRoute from "./routes/MessageRoute.js";
 
@@ -46,6 +47,7 @@ app.use("/api/plagiarism", detectorrouter);
 app.use("/chat", chatrouter);
 app.use("/message", messagerouter);
 app.use("/api/student/getdetails", getrouter);
+app.use("/api/student/chat", chatrouter2);
 
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 

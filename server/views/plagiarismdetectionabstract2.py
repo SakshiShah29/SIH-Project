@@ -48,6 +48,8 @@ vectors_final=list(zip(dir_list,sentence_vecs))
 # # print(sentence_vecs.shape)
 
 # finalans=cosine_similarity([sentence_vecs[0]],sentence_vecs[1:])
+plagiarism_found=0
+max_plagiarism=0
 finalans=[]
 def check_plagiarism():
     text_file_to_check=vectors_final[0][0]
@@ -60,19 +62,30 @@ def check_plagiarism():
         # print(ans)  
         if(ans>=0.70):
             # print("The plagiarism is detected it doesn't make sense to detect anymore")
+            plagiarism_found=ans
             break
         else:
+            #Inside this we also need to find the maximum plagiarism that has been detected
              finalans.append(ans)  
+             if(finalans[-1]<max_plagiarism):
+                 max_plagiarism=finalans[-1]
 
 check_plagiarism()
 
 # print(len(vectors_final))
 # print("The final array that we got is:")
+
+#When the plagiarism is detected print out the maximum
 if(len(finalans)==len(vectors_final)-1):
     print("0")
+    # print("This is the maximum plagiarism")
+    print(max_plagiarism)
+   
 
 else:
     print("1")
+    print(plagiarism_found)
+    # # print('This is the lowest percentage of plagiarism that can be detected in a code')
 
 
 

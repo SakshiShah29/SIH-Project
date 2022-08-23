@@ -30,6 +30,9 @@ detectorrouter.post("/check", async (req, res) => {
     path1,
   ]);
 
+  let titlemaximumplagiarism;
+  let abstractmaximumplagiarism;
+
   //Now the first step is to find all the projects that were uploaded before this project id
   Projectupload.find({}, (err, data) => {
     if (err) {
@@ -112,6 +115,8 @@ detectorrouter.post("/check", async (req, res) => {
         );
 
         let arr = data.toString().split("");
+        titlemaximumplagiarism = arr[3];
+        console.log(arr);
         if (arr[0] == "0") {
           titleplagiarism = false;
         } else {
@@ -133,6 +138,8 @@ detectorrouter.post("/check", async (req, res) => {
       childPython2.stdout.on("data", (data) => {
         console.log("This is output after checking abstracts", data.toString());
         let arr = data.toString().split("");
+        abstractmaximumplagiarism = arr[3];
+        console.log(arr);
         if (arr[0] == "0") {
           // abstractplagiarism = false;
           console.log(titleplagiarism);
@@ -140,10 +147,14 @@ detectorrouter.post("/check", async (req, res) => {
           if (titleplagiarism == false) {
             res.status(200).json({
               msg: "The plagiarism is not detected",
+              titlemaximumplagiarism,
+              abstractmaximumplagiarism,
             });
           } else {
             res.json({
               msg: "The plagiarism is detected",
+              titlemaximumplagiarism,
+              abstractmaximumplagiarism,
             });
           }
         } else {

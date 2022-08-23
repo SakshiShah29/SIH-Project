@@ -10,6 +10,7 @@ export default function Adminlogin() {
   let [privatekey, setprivatekey] = useState("");
   const [walletaddress, setwalletaddress] = useState("");
   const [walletbalance, setwalletbalance] = useState("");
+  const [titleplag, settitleplag] = useState("");
   const [exists, setexists] = useState(false);
   const [pending, setshowpending] = useState(false);
   let [path, setpath] = useState();
@@ -52,10 +53,8 @@ export default function Adminlogin() {
     }
   }
 
-  function plagiarismover(data) {
-    console.log("The plagiarism detection is over and we have got the results");
-    console.log(data);
-
+  function plagiarismover(final, data) {
+    //Now once we have got the plagiarism data the next step is to assign the nfts to the user
     //If the msg is the plagiarism is not detected then change the projectstatus from pending to approved
     //Otherwise if plagiarism is detected then in that case change the projectstatus to rejected
     //Also remove the project from the project uploads after notifying the student that the project has not been approved
@@ -84,7 +83,11 @@ export default function Adminlogin() {
 
     let final = await res.json();
     console.log("This is the response received from the backend");
-    plagiarismover(final);
+    // plagiarismover(final, data);
+    // console.log(final);
+    console.log("This is the account address of the lead");
+    console.log(data.leadaddress);
+    console.log("The plagiarism detection is over and we have got the results");
     console.log(final);
   }
 

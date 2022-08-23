@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import classes from "./Login.module.css";
 import { useQuery } from "react-query";
 import { Marginer } from "./marginer";
+import { useNavigate } from "react-router";
 
 export default function Adminlogin() {
   let [address, setaddress] = useState("");
@@ -13,6 +14,7 @@ export default function Adminlogin() {
   const [exists, setexists] = useState(false);
   const [pending, setshowpending] = useState(false);
   let [path, setpath] = useState();
+  let nav = useNavigate();
 
   const [state, setstate] = useState({
     _web3: null,
@@ -52,9 +54,10 @@ export default function Adminlogin() {
     }
   }
 
-  function plagiarismover(data) {
+  function plagiarismover(final, data) {
     console.log("The plagiarism detection is over and we have got the results");
-    console.log(data);
+    console.log(final);
+    console.log("This is the data for that given project");
 
     //If the msg is the plagiarism is not detected then change the projectstatus from pending to approved
     //Otherwise if plagiarism is detected then in that case change the projectstatus to rejected
@@ -84,7 +87,7 @@ export default function Adminlogin() {
 
     let final = await res.json();
     console.log("This is the response received from the backend");
-    plagiarismover(final);
+    plagiarismover(final, data);
     console.log(final);
   }
 
@@ -255,7 +258,7 @@ export default function Adminlogin() {
         </button>
       )}
       <Marginer direction="vertical" margin="1em" />
-      {exists && (
+      {exists && !pending && (
         <div>
           <p>{walletaddress}</p>
           <p>{walletbalance}</p>
@@ -286,7 +289,7 @@ export default function Adminlogin() {
           </button>
         </div>
       )}
-      {pending && <Showevent />}
+      {pending && nav("/Showevent")}
     </div>
   );
 }

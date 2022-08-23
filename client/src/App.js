@@ -18,6 +18,7 @@ import Auth from "./components/Auth/Auth.jsx";
 import Chatapplication from "./components/Chatapplicationfinal/Chat.jsx";
 import Profileid from "./components/Chatapplication2/Profileid";
 import Chat from "./components/Chatapplication2/Chat";
+import Showevent from "./components/loginPage/Showevents";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/Showevent" element={<Showevent />} />
           {/* <Route path="/Chat" element={<Chatapplication />} /> */}
           {/* <Route path="/" element={<Chatapplication />} /> */}
           {/* <Route path="/" element={<Chatlogin />} /> */}

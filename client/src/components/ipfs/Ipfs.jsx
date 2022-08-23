@@ -110,6 +110,9 @@ export default function Ipfs(props) {
     console.log("This is the file");
     console.log("FILE", f);
     const fileIpfs = await saveFile(f.name, file, { saveIPFS: true });
+    // const res = await f.saveIPFS()
+    // console.log(await res.ipfs(), await res.hash())
+    console.log(fileIpfs);
     console.log(fileIpfs._ipfs);
     console.log(typeof fileIpfs._ipfs);
     let result = fileIpfs._ipfs.substring(34);

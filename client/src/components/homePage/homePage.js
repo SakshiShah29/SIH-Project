@@ -132,7 +132,13 @@ export default function Homepage() {
         {console.log(filtereddata, "ThiS is the filtered data1")}
         {filtereddata.length !== 0 &&
           filtereddata.map((ele) => {
-            return <HomeCards title={ele.title} university={ele.university} />;
+            return (
+              <HomeCards
+                title={ele.title}
+                university={ele.university}
+                rest={ele}
+              />
+            );
           })}
 
         <Pagination />

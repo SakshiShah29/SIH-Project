@@ -30,6 +30,10 @@ const Navbar = () => {
             {" "}
             <Link to="/landingPage">LogOut</Link>{" "}
           </li>
+          <li>
+            {" "}
+            <Link to="/Chatprofile">Message application</Link>{" "}
+          </li>
         </ul>
       </div>
     </>

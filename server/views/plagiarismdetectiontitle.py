@@ -119,6 +119,8 @@ text_file_to_check=""
 vector_to_check=[]
 
 finalans=[]
+plagiarism_found=0
+max_plagiarism=0
 def check_plagiarism():
     text_file_to_check=vectors_final[0][0]
     vectors_to_check=vectors_final[0][1]
@@ -130,9 +132,12 @@ def check_plagiarism():
         # print(ans)  
         if(ans>=0.70):
             # print("The plagiarism is detected it doesn't make sense to detect anymore")
+            plagiarism_found=ans
             break
         else:
              finalans.append(ans)  
+             if(finalans[-1]<max_plagiarism):
+                max_plagiarism=finalans[-1]
 
 check_plagiarism()
 
@@ -140,7 +145,10 @@ check_plagiarism()
 # print("The final array that we got is:")
 if(len(finalans)==len(vectors_final)-1):
     print('0')
+    # print("This is the maximum plagiarism")
+    print(max_plagiarism)
 
 else:
     print('1')
+    print(plagiarism_found)
 

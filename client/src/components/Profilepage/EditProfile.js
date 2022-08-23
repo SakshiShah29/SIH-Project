@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import close from "../../images/Close.png";
@@ -5,7 +6,10 @@ import user from "../../images/user.png";
 import { Marginer } from "../loginPage/marginer";
 import classes from "./EditProfile.module.css";
 
+
+
 const EditProfile = (props) => {
+
   const [branch, setbranch] = useState();
   // const [interests, setinterests] = useState([]);
   const [interest1, setinterest1] = useState("");
@@ -53,6 +57,7 @@ const EditProfile = (props) => {
     );
   }
 
+
   return (
     <div className={classes.boxcontainer}>
       <div classname={classes.close}>
@@ -80,6 +85,7 @@ const EditProfile = (props) => {
           }}
         />
 
+
         <input
           className={classes.inputcontainer}
           type="text"
@@ -100,6 +106,7 @@ const EditProfile = (props) => {
           }}
         />
 
+
         <input
           className={classes.inputcontainer}
           placeholder="Description"
@@ -109,23 +116,7 @@ const EditProfile = (props) => {
           }}
         />
 
-        {/* <input
-      className={classes.inputcontainer}
-      type="password"
-      placeholder="Password"
-      
-    /> */}
 
-        {/* <input className={classes.inputcontainer}
-    
-    placeholder="Domain interested" />
-
-    <input
-      className={classes.inputcontainer}
-      type="number"
-      placeholder="Phone Number"
-      
-    /> */}
       </form>
 
       <Marginer direction="vertical" margin="2em" />

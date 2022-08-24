@@ -12,8 +12,8 @@ import { useNavigate } from "react-router";
 import Showevent from "./Showevents";
 
 export default function Adminlogin(props) {
-  let walletaddressfinal=props.walletaddress
-  let setwalletaddressfinal=props.setwalletaddress
+  let walletaddressfinal = props.walletaddress;
+  let setwalletaddressfinal = props.setwalletaddress;
   let [address, setaddress] = useState("");
   let [privatekey, setprivatekey] = useState("");
   const [walletaddress, setwalletaddress] = useState("");
@@ -349,8 +349,7 @@ export default function Adminlogin(props) {
           </button>
         </div>
       )}
-      
-      {pending && nav('/Showevent')}
+      {pending && nav("/Showevent")}
     </div>
   );
 }

@@ -12,6 +12,7 @@ export default function Showevent(props) {
     console.log("The plagiarism detection is over and we have got the results");
     console.log(final);
     console.log("This is the data for that given project");
+    console.log(data);
 
     //If the msg is the plagiarism is not detected then change the projectstatus from pending to approved
     //Otherwise if plagiarism is detected then in that case change the projectstatus to rejected

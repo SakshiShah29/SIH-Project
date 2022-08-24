@@ -1,0 +1,1 @@
+This is a simple to do list application where the user logs in their daily tasks. This application was created for the purpose of understanding react hooks

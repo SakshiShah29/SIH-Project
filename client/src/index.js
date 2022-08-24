@@ -14,8 +14,8 @@ ReactDOM.render(
       <QueryClientProvider client={clients}>
         <ReactQueryDevtools />
         <MoralisProvider
-          serverUrl="https://utenli6iwpvw.usemoralis.com:2053/server"
-          appId="MWimdQYCKxWopxklrWuY2L2TG0QKAOATDhuExk4X"
+          serverUrl="https://a0lgf2brcjmi.usemoralis.com:2053/server"
+          appId="72UJC9m3PuSy3nGPQkgQYzdmSR8sjKr2QhdoY2wp"
         >
           <App />
         </MoralisProvider>

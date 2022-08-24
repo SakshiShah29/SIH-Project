@@ -3,6 +3,7 @@ import { Button, Form, Modal } from "react-bootstrap";
 import { useMoralis, useMoralisFile } from "react-moralis";
 // import getWeb3 from "./getWeb3";
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import storeFiles from "./ipfs2";
 
 export default function Ipfs(props) {
   let [state, setstate] = useState({
@@ -13,7 +14,7 @@ export default function Ipfs(props) {
 
   const [file, setFile] = useState();
   const [showModal, setShowModal] = useState(false);
-  const [loggedin, setloggedin] = useState(false);
+  // const [loggedin, setloggedin] = useState(false);
   // const [url, seturl] = useState("");
   // const [description, setdescription] = useState("");
   // const [title, settitle] = useState("");
@@ -22,6 +23,7 @@ export default function Ipfs(props) {
   const handleShow = () => setShowModal(true);
 
   const { saveFile } = useMoralisFile();
+  // console.log("This is the save file function", saveFile);
   let accounts = useRef(0);
   const {
     authenticate,
@@ -109,14 +111,27 @@ export default function Ipfs(props) {
   const saveFileIPFS = async (f) => {
     console.log("This is the file");
     console.log("FILE", f);
-    const fileIpfs = await saveFile(f.name, file, { saveIPFS: true });
-    console.log(fileIpfs._ipfs);
-    console.log(typeof fileIpfs._ipfs);
-    let result = fileIpfs._ipfs.substring(34);
-    console.log(result);
-    console.log(typeof result);
-    seturl(`https://ipfs.moralis.io:2053/ipfs/${result}`);
-    setcontentid(result);
+    let content_id = await storeFiles([f]);
+
+    // let fileIpfs;
+    // try {
+    //   // fileIpfs = await saveFile(f.name, file, { saveIPFS: true });
+    // } catch (err) {
+    //   console.log(err, "This is the error");
+    // }
+
+    //Now that we have got the content id
+    console.log("This is the content id in the frontend");
+    const url = `ipfs://${content_id}`;
+    console.log("This is the url of the ipfs", url);
+    // console.log(fileIpfs);
+    // console.log(fileIpfs._ipfs);
+    // console.log(typeof fileIpfs._ipfs);
+    // let result = fileIpfs._ipfs.substring(34);
+    // console.log(result);
+    // console.log(typeof result);
+    seturl(url);
+    setcontentid(content_id);
   };
 
   const handleFinal = () => {

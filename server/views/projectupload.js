@@ -122,6 +122,8 @@ uploadrouter.post(
           var newData = JSON.stringify(myObject);
           fs.writeFile(
             "C:/Users/Bhaskar/Desktop/SIH-clone/SIH-Project/client/src/components/Data.json",
+
+            // "C:/Users/Sakshi Shah/OneDrive/Documents/GitHub-projects/SIH-Project/Data.json",
             newData,
             (err) => {
               // error checking

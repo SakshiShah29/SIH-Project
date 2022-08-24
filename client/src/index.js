@@ -7,6 +7,7 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import clients from "./client";
 import store from "./store/ReduxStore";
 import { MoralisProvider } from "react-moralis";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <Provider store={store}>

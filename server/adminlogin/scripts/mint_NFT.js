@@ -93,19 +93,14 @@ async function minting(tokenUri, adminaddress, adminprivatekey, leadaddress) {
   console.log("Hence the NFT is now transferred to the lead addresss");
 }
 
-async function mintnft(adminaddress, adminprivatekey, leadaddress) {
-  minting(
-    "https://gateway.pinata.cloud/ipfs/QmWcwWiGjHW8kXqBw2X7JeECTyNMUF5L6rLR3ypPePVfM1",
-    adminaddress,
-    adminprivatekey,
-    leadaddress
-  );
+async function mintnft(tokenuri, adminaddress, adminprivatekey, leadaddress) {
+  minting(tokenuri, adminaddress, adminprivatekey, leadaddress);
 }
 
-mintnft(
-  "0xE27E8bE768b01070F4eb12523e8a52F8D682F1Fa",
-  "0c7fcfbf8330ec840cae0000ba1553f5bcd6070e51747c72c24412b5979fda8f",
-  "0x6fC88f402E6e8AaC089366F95186dB80675f771d"
-);
+// mintnft(
+//   "0xE27E8bE768b01070F4eb12523e8a52F8D682F1Fa",
+//   "0c7fcfbf8330ec840cae0000ba1553f5bcd6070e51747c72c24412b5979fda8f",
+//   "0x6fC88f402E6e8AaC089366F95186dB80675f771d"
+// );
 
 module.exports = { mintnft };

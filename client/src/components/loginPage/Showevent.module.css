@@ -1,0 +1,39 @@
+.card{
+    background-color: #2B3566;
+    margin:20px;
+    border-radius: 15px;
+    width:70%;
+    margin-left: 200px;
+}
+.upper{
+    display:flex
+}
+    
+.details{
+    width:40%;
+    color:#fff;
+    padding: 15px;
+}
+.btnsection{
+    margin-left: 90px;
+    margin-top: 35px;
+}
+.btn1{
+    margin-top: 60px;
+    margin-bottom: 80px;
+    margin-left: 80px;
+    margin-right:-50px;
+    color:#fff;
+    padding:0px 2%;
+    font-size: 15px;
+    font-weight: 600;
+border:none;
+border-radius: 5px;
+cursor:pointer;
+transition:all, 240ms ease-in-out;
+background:  #684BFE;
+}
+.body{
+    background-color: #111634;
+    height: 100vh;
+}

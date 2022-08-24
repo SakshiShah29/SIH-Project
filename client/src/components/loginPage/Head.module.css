@@ -1,0 +1,28 @@
+.header {
+    height:90px;
+    width:100%;
+    background-color: #030824;;
+  }
+
+.upper{
+    display:flex;
+    justify-content: space-between;
+}
+
+.upper > a{
+    color:#684BFE;
+    font-size: 40px;
+    margin-left: 40px;
+   margin-top: -15px;
+    cursor: pointer;
+}
+.upper >a:hover,
+.upper:active{
+    color:white;
+   
+}
+
+.logo{
+    margin-top: 20px;
+
+}

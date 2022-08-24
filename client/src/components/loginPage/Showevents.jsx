@@ -2,13 +2,18 @@ import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { Marginer } from "./marginer";
 import { useWalletaddress } from "../../Stores/wallet-context";
-
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import Head from "./Head";
+import classes from "./Showevent.module.css"
+import Button from "../Profilepage/Button";
 export default function Showevent(props) {
-
+  const [progress,setprogress]=useState(false);
   const walletaddressfinal=props.walletaddress;
   console.log('This is the wallet address passed to the ShowEvent');
   console.log(walletaddressfinal);
-  let { walletaddress } = props;
+  // let { walletaddress } = props;
+  let walletaddress="0xE27E8bE768b01070F4eb12523e8a52F8D682F1Fa";
   let [shown, setshown] = useState(true);
   let [title, settitle] = useState();
   let [abstract, setabstract] = useState();
@@ -23,7 +28,8 @@ export default function Showevent(props) {
     //Otherwise if plagiarism is detected then in that case change the projectstatus to rejected
     //Also remove the project from the project uploads after notifying the student that the project has not been approved
   }
-
+  
+  
   async function plagiarismchecking(data) {
     //Now as we have the data available with us let us code the backend to implement the functionality of plagiarism detection
     // alert("90 % plagiarism detected");
@@ -51,6 +57,9 @@ export default function Showevent(props) {
     console.log(final);
   }
 
+  
+  
+
   function DisplayProject(props) {
     let { obj } = props;
     //So the prop has the object which contains the projectid
@@ -69,17 +78,22 @@ export default function Showevent(props) {
     }
 
     console.log(data, "This is the project details");
-
+    const percentage = 66;
     return (
-      <div>
-        {data.data.title}
+      <div className={classes.card}>
+     
+      <div className={classes.upper}>
+        <div className={classes.details}>
+        <p>{data.data.title}</p>
         <br />
         {data.data.abstract}
         <br />
-        <a href={data.data.projecturl}>
+        </div>
+        
+        <button className={classes.btn1} href={data.data.projecturl}>
           {" "}
-          Click this link to download the project
-        </a>
+       download the project
+        </button>
         <br />
         {/* <label>Enter the path of the Desktop</label>;
             <input
@@ -88,9 +102,13 @@ export default function Showevent(props) {
                 setpath(e.target.value);
               }}
             ></input> */}
-        <button onClick={() => plagiarismchecking(data.data)}>
+            <div className={classes.btnsection}>
+        <Button onClick={ () =>plagiarismchecking(data.data)}>
           Check for plagiarism
-        </button>
+        </Button>
+        </div>
+  
+      </div>
       </div>
     );
   }
@@ -122,9 +140,19 @@ export default function Showevent(props) {
   //For that we use the concept of react query
   console.log(data, "This is the data for the project details");
 
-  return data.data.map((ele) => {
-    return <DisplayProject obj={ele} />;
-  });
+  return(
+    <div className={classes.body}>
+    <Head/>
+    <FinalDisplay/>
+    </div>
+  )
+
+  function FinalDisplay(){
+    return data.data.map((ele) => {
+      return <DisplayProject obj={ele} />;
+    });
+  }
+  
 
   // return null;
   // let title;

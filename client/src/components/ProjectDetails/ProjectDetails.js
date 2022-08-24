@@ -4,7 +4,10 @@ import Navbar from "../Navbar/Navbar";
 import CardUi from "./CardUi";
 import CommentSection from "./CommentSection";
 import ProjectContext from "../contexts/ProjectdetailProvider";
-
+import {CCarousel,CCarouselItem,CImage} from "@coreui/react"
+import cc1 from "../../images/cc1.png"
+import cc2 from "../../images/cc2.png"
+import cc3 from "../../images/cc3.png"
 const ProjectDetails = (props) => {
   let obj=useContext(ProjectContext);
   let {projectdetails,setprojectdetails}=obj;
@@ -32,6 +35,17 @@ const ProjectDetails = (props) => {
       </div>
       <div className={classes.bottomContainer}>
         <h3>{projectdetails.title}</h3>
+       <div className={classes.pics}> <CCarousel controls transition="crossfade">
+       <CCarouselItem>
+         <CImage className="d-block w-100 " src={cc3} alt="slide 1" />
+       </CCarouselItem>
+       <CCarouselItem>
+         <CImage className="d-block w-100 " src={cc2} alt="slide 2" />
+       </CCarouselItem>
+       <CCarouselItem>
+         <CImage className="d-block w-100 " src={cc1} alt="slide 3" />
+       </CCarouselItem>
+     </CCarousel></div>
         <div className={classes.upper}>
           <div className={classes.details}>
            

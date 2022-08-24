@@ -13,10 +13,9 @@ height: auto
    background-color: #111634;
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 54px;
-
-   
+    margin-left: -1200px;
     overflow-y: hidden;
     letter-spacing: 0.04em;
 
@@ -36,16 +35,20 @@ height: auto
     color:antiquewhite;
     font-size: large;
     overflow-y: hidden;
+    margin-left: -70px;
+    font-weight: 700;
 }
 .details >p{
     color: #A4A4A4;
-    
+    font-size: 17px !important;
+    line-height: 25px;
 }
 
 .centerButton{
     display: flex;
     justify-content: center;
     padding-top:35px;
+    padding-bottom: 45px;
 }
 .btn{
     text-decoration: none;
@@ -69,4 +72,5 @@ border-radius: 15px;
 margin-left:150px;
 padding-left: 40px;
 margin-bottom: 20px;
+
 }

@@ -23,6 +23,7 @@ justify-content: space-between;
   font-weight: 600;
   font-size: 22px;
   line-height: 48px;
+  overflow-y: hidden !important;
   
   }
   

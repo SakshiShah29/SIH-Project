@@ -16,23 +16,25 @@ border-radius: 15px;
 .uni{
     height:28px;
     width:28px;
-margin-top: 6px;
+margin-top: -05px;
 }
 .cardSubtitle{
-    color:#fff;
-    font-size: 20px;
-    font-weight: 400;
-    padding-left: 10px;
+    color:#fff !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    padding-left: 15px;
+    padding-top: 14px;
 }
 
 .tech-stack{
     color: #A4A4A4;
     font-size: 17px;
     font-weight: 200;
-    margin-left: 18px;;
+    margin-left: 10px;;
 }
 .tech-stack > h4{
     font-size: 18px;
+    margin-left: -60px;;
 }
 
 .tech-stack > p{
@@ -81,7 +83,9 @@ margin-top: 6px;
 }
 .collaborators >h4{
     font-size: 18px;
-    color:#A4A4A4;
+    color:#fff;
+    margin-left: -65px;;
+    
 }
 .images{
     display: flex;

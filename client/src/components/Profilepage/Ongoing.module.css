@@ -1,6 +1,7 @@
 .body{
     display:flex;
     flex-wrap: wrap;
-    background: #030824;
+    background: #111634;
     justify-content: center;
+    height: 100vh;
 }

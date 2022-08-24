@@ -3,12 +3,17 @@
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: #030824;
+    background: #111634;
+    height:35.5vh;
+    color:#fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 130px;
 }
 h3{
     margin:0;
     padding-top: 20px;
     text-align: center;
-    background-color: #030824;
+    background-color: #111634;
     color: #fff;
 }

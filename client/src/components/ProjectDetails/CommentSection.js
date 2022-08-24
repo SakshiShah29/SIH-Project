@@ -51,7 +51,7 @@ const CommentSection = ({ currentUserId }) => {
     <div className={classes.comments}>
      <div className={classes.upper}>
      <h3 className={classes.commentsTitle}>Comments</h3>
-     <div className={classes.commentlinker}>View All Comments</div>
+ 
      
      </div>
       <div className={classes.commentsContainer}>

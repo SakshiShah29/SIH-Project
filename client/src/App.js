@@ -19,6 +19,7 @@ import Chatapplication from "./components/Chatapplicationfinal/Chat.jsx";
 import Profileid from "./components/Chatapplication2/Profileid";
 import Chat from "./components/Chatapplication2/Chat";
 import Showevent from "./components/loginPage/Showevents";
+import ProjectContext from "./components/contexts/ProjectdetailProvider";
 // import WalletContext from "./Stores/wallet-context";
 
 
@@ -27,9 +28,11 @@ import Showevent from "./components/loginPage/Showevents";
 
 function App() {
   let [walletaddress,setwalletaddress]=useState('')
+  let [projectdetails,setprojectdetails]=useState({})
   return (
     <>
       {/* <Profilepage /> */}
+      <ProjectContext.Provider value={{projectdetails,setprojectdetails}}>
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -82,6 +85,7 @@ function App() {
           {/* <Route path="/Chat" element={<Chat />}></Route> */}
         </Routes>
       </Router>
+      </ProjectContext.Provider>
     </>
   );
 }

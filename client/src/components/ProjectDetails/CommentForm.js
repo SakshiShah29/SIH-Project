@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from "./CommentSection.module.css";
 import { useState } from 'react';
+import { TextField } from '@mui/material';
 export const CommentForm = ({handleSubmit,submitlabel}) => {
   const [text,setText]=useState("");
 
@@ -13,9 +14,10 @@ export const CommentForm = ({handleSubmit,submitlabel}) => {
   }
   return (
     <form onSubmit={onSubmit} className={classes.formContainer}>
-    <input type={"text"} className={classes.commentFormTeaxtArea} value={text} onChange={(e)=>setText(e.target.value)}/>
+    <TextField id="standard-basic" label="Standard" variant="standard" sx={{width:"70%",Color:"#fff"}} onChange={(e)=>setText(e.target.value)}/>
     <button className={classes.commentFormButton} disabled={isTextAreaDisabled}>{submitlabel}</button>
    
     </form>
   )
 }
+// <input type={"text"} className={classes.commentFormTeaxtArea} value={text} onChange={(e)=>setText(e.target.value)}/>

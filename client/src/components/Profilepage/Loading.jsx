@@ -9,7 +9,7 @@ function Media(props) {
   const { loading = false } = props;
 
   return (
-    <Grid container wrap="nowrap">
+    <Grid container wrap="nowrap" sx={{backgroundColor:"#111634"}}>
       {(loading && Array.from(new Array(3))).map((item, index) => (
         <Box
           key={index}
@@ -22,7 +22,7 @@ function Media(props) {
               src={item.src}
             />
           ) : (
-            <Skeleton variant="rectangular" width={210} height={118} />
+            <Skeleton variant="rectangular" width={210} height={118}  sx={{backgroundColor:"#232B53"}}/>
           )}
 
           {item ? (
@@ -43,8 +43,8 @@ function Media(props) {
             </Box>
           ) : (
             <Box sx={{ pt: 0.5 }}>
-              <Skeleton />
-              <Skeleton width="60%" />
+              <Skeleton sx={{backgroundColor:"#232B53"}}/>
+              <Skeleton width="60%" sx={{backgroundColor:"#232B53"}}/>
             </Box>
           )}
         </Box>

@@ -37,7 +37,7 @@ function Details(props) {
       </div>
       <h4>{props.institute}</h4>
       <h4>{props.branch}</h4>
-      <h4>{props.interests}</h4>
+      <h4 style={{marginRight:"10px"}}>{props.interests}</h4>
       <h4>{props.description}</h4>
     </div>
   );

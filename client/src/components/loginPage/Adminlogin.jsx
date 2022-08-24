@@ -4,6 +4,9 @@ import React, { useState, useEffect } from "react";
 import classes from "./Login.module.css";
 import { useQuery } from "react-query";
 import { Marginer } from "./marginer";
+
+import { ToastContainer, toast } from "react-toastify";
+
 import { useNavigate } from "react-router";
 import Showevent from "./Showevents";
 
@@ -16,6 +19,7 @@ export default function Adminlogin() {
   const [pending, setshowpending] = useState(false);
   let [path, setpath] = useState();
   let nav = useNavigate();
+  let [isLoading, setisLoading] = useState();
 
   const [state, setstate] = useState({
     _web3: null,
@@ -51,7 +55,15 @@ export default function Adminlogin() {
       //   setwalletbalance(state._web3.utils.fromWei(walletbalance, "ether"));
       setexists(true);
     } else {
-      alert("The metamask wallet is not detected");
+      toast.warn("Metamask Wallet not detected!", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
   }
 
@@ -105,9 +117,19 @@ export default function Adminlogin() {
   //       })
   //   );
 
-  //   if (isLoading) {
-  //     return <div>The data is still loading in display project part</div>;
-  //   }
+  // if (isLoading) {
+  //   return <ToastContainer
+  //   position="bottom-right"
+  //   autoClose={5000}
+  //   hideProgressBar={false}
+  //   newestOnTop={false}
+  //   closeOnClick
+  //   rtl={false}
+  //   pauseOnFocusLoss
+  //   draggable
+  //   pauseOnHover
+  //   >Pending projects are still loading!</ToastContainer>;
+  // }
 
   //   console.log(data, "This is the project details");
 
@@ -149,9 +171,25 @@ export default function Adminlogin() {
     });
     const data = await res.json();
     if (data.error) {
-      alert("The login has failed and the transaction has been reverted back");
+      toast.error("🦄 The Login has failed! ", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } else {
-      alert("The login is successful");
+      toast.success("🦄 Login is Successfull", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
       //Hence this means that the login is done and now its time to show the pending events of the admin
       setshowpending(true);
     }
@@ -181,9 +219,25 @@ export default function Adminlogin() {
   //     }
   //   );
 
-  //   if (isLoading) {
-  //     return <div>The events are still loading</div>;
-  //   }
+  // <<<<<<< HEAD
+  // if (isLoading) {
+  //   return <div>The events are still loading</div>;
+  // }
+  // =======
+  //     if (isLoading) {
+  //       return <ToastContainer
+  //       position="bottom-right"
+  //       autoClose={5000}
+  //       hideProgressBar={false}
+  //       newestOnTop={false}
+  //       closeOnClick
+  //       rtl={false}
+  //       pauseOnFocusLoss
+  //       draggable
+  //       pauseOnHover
+  //       >The Events are still loading</ToastContainer>;
+  //     }
+  // >>>>>>> 6dbd0b5ad4adea3aa326ec636c48082575b1b568
 
   //   //Now data.data is an array which contains all the pending requests
   //   //From the data.data there is a key which is projectid we fetch the project details from the ids
@@ -259,6 +313,7 @@ export default function Adminlogin() {
         </button>
       )}
       <Marginer direction="vertical" margin="1em" />
+
       {exists && !pending && (
         <div>
           <p>{walletaddress}</p>

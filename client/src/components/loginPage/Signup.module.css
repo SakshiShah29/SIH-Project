@@ -81,3 +81,29 @@ background:  #684BFE;
     border: 2px solid #684BFE;
     background-color: transparent;
 }
+
+.dataresult{
+    margin-top:4px;
+    width:450px;
+    height:200px;
+    background-color: #2B3566;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.dataresult::-webkit-scrollbar{
+    display: none;
+}
+.dataresult .dataitems{
+    width:100%;
+    height:30px;
+    display: flex;
+    align-items: center;
+    color:#fff;
+   
+}
+ p{
+font-size: 10px;
+}

@@ -55,7 +55,7 @@ loginRouter.post("/login", async (req, res) => {
 
     if (data.length == 0) {
       console.log("This ran");
-      res.json({
+      return res.json({
         status: "Not Ok",
         error: "The user is not found. Please Sign Up",
       });

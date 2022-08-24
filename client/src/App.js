@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState}from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
@@ -19,19 +19,25 @@ import Chatapplication from "./components/Chatapplicationfinal/Chat.jsx";
 import Profileid from "./components/Chatapplication2/Profileid";
 import Chat from "./components/Chatapplication2/Chat";
 import Showevent from "./components/loginPage/Showevents";
+// import WalletContext from "./Stores/wallet-context";
+
+
+
+
 
 function App() {
+  let [walletaddress,setwalletaddress]=useState('')
   return (
     <>
       {/* <Profilepage /> */}
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/Showevent" element={<Showevent />} />
-          {/* <Route path="/Chat" element={<Chatapplication />} /> */}
+          <Route path="/Showevent" element={<Showevent walletaddress={walletaddress}/>} />
+          // <Route path="/Chat" element={<Chatapplication />} />
           {/* <Route path="/" element={<Chatapplication />} /> */}
           {/* <Route path="/" element={<Chatlogin />} /> */}
-          <Route path="/landingPage" element={<LandingPage />} />
+          <Route path="/landingPage" element={<LandingPage walletaddress={walletaddress} setwalletaddress={setwalletaddress} />} />
           {/*<Route path="/projectUpload" element={<ProjectUpload />} />*/}
           <Route path="/ProjectDetails" element={<ProjectDetails />} />
           <Route path="/Chatprofile" element={<Chat />} />

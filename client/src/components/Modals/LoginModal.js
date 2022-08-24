@@ -6,7 +6,7 @@ const LoginModal = (props) => {
   return (
     <div>
     <div className={classes.backdrop} onClick={props.onLogin}></div>
-    <div className={classes.modal}><AccountBox /></div>
+    <div className={classes.modal}><AccountBox walletaddress={props.walletaddress} setwalletaddress={props.setwalletaddress}/></div>
     </div>
   )
 }

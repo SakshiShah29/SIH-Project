@@ -130,7 +130,7 @@ export default function Homepage() {
           </button>
         </div>
         {console.log(filtereddata, "ThiS is the filtered data1")}
-        {filtereddata.length !== 0 &&
+        <div className="cards">{filtereddata.length !== 0 &&
           filtereddata.map((ele) => {
             return (
               <HomeCards
@@ -139,7 +139,7 @@ export default function Homepage() {
                 rest={ele}
               />
             );
-          })}
+          })}</div>
 
         <Pagination />
       </div>

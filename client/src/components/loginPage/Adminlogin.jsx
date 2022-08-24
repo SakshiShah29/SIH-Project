@@ -4,13 +4,16 @@ import React, { useState, useEffect } from "react";
 import classes from "./Login.module.css";
 import { useQuery } from "react-query";
 import { Marginer } from "./marginer";
-
+import { createContext } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import { useWalletaddress } from "../../Stores/wallet-context";
 
 import { useNavigate } from "react-router";
 import Showevent from "./Showevents";
 
-export default function Adminlogin() {
+export default function Adminlogin(props) {
+  let walletaddressfinal=props.walletaddress
+  let setwalletaddressfinal=props.setwalletaddress
   let [address, setaddress] = useState("");
   let [privatekey, setprivatekey] = useState("");
   const [walletaddress, setwalletaddress] = useState("");
@@ -51,6 +54,7 @@ export default function Adminlogin() {
 
       console.log(accounts);
       setwalletaddress(accounts.toString());
+      setwalletaddressfinal(accounts.toString());
       //   let walletbalance = await state._web3.eth.getBalance(accounts.toString());
       //   setwalletbalance(state._web3.utils.fromWei(walletbalance, "ether"));
       setexists(true);
@@ -345,7 +349,10 @@ export default function Adminlogin() {
           </button>
         </div>
       )}
-      {pending && <Showevent walletaddress={walletaddress} />}
+      
+      {pending && nav('/Showevent')}
     </div>
   );
 }
+
+// <Showevent walletaddress={walletaddress} />

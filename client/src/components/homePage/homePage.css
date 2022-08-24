@@ -1,3 +1,7 @@
 .homePage{
     background: #111634;
+    height:100vh;
+}
+.cards{
+    display:flex;
 }

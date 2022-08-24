@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { Marginer } from "./marginer";
+import { useWalletaddress } from "../../Stores/wallet-context";
 
 export default function Showevent(props) {
+
+  const walletaddressfinal=props.walletaddress;
+  console.log('This is the wallet address passed to the ShowEvent');
+  console.log(walletaddressfinal);
   let { walletaddress } = props;
   let [shown, setshown] = useState(true);
   let [title, settitle] = useState();

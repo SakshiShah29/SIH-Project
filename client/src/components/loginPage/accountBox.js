@@ -32,7 +32,7 @@ const expandingTransition = {
   duration: 2.3,
   stiffness: 30,
 };
-function AccountBox() {
+function AccountBox(props) {
   const [isExpanded, setExpanded] = useState(false);
   const [active, setActive] = useState("student");
   const [addClass, setAddClass]=useState("false")
@@ -80,7 +80,7 @@ function AccountBox() {
         </div>
         <div className={classes.innercontainer}>
           {active === "student" && <Loginform />}
-          {active === "admin" && <Adminlogin/>}
+          {active === "admin" && <Adminlogin walletaddress={props.walletaddress} setwalletaddress={props.setwalletaddress}/>}
         </div>
         <Marginer direction="vertical" margin="1em"/>
       </div>

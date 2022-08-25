@@ -21,18 +21,7 @@ const Comment = ({ comment, replies, currentUserId, deleteComment }) => {
           <div className={classes.date}>{createdAt}</div>
         </div>
         <div className={classes.commentText}>{comment.body}</div>
-        <div className={classes.commentactions}>
-          <div className={classes.commentAction}>Reply</div>
-
-          <div className={classes.commentAction}>Edit</div>
-
-          <div
-            className={classes.commentAction}
-            onClick={() => deleteComment(comment.id)}
-          >
-            Delete
-          </div>
-        </div>
+        
         {replies.length > 0 && (
           <div className={classes.replies}>
             {replies.map((reply) => (

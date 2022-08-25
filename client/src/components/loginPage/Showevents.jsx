@@ -1,21 +1,108 @@
 import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { Marginer } from "./marginer";
-
+import { useWalletaddress } from "../../Stores/wallet-context";
+// import { CircularProgressbar } from "react-circular-progressbar";
+// import "react-circular-progressbar/dist/styles.css";
+import Head from "./Head";
+import classes from "./Showevent.module.css";
+import Button from "../Profilepage/Button";
 export default function Showevent(props) {
-  let { walletaddress } = props;
+  const [progress, setprogress] = useState(false);
+  const walletaddressfinal = props.walletaddress;
+  console.log("This is the wallet address passed to the ShowEvent");
+  console.log(walletaddressfinal);
+  // let { walletaddress } = props;
+  let walletaddress = "0xE27E8bE768b01070F4eb12523e8a52F8D682F1Fa";
+  let privatekey =
+    "0c7fcfbf8330ec840cae0000ba1553f5bcd6070e51747c72c24412b5979fda8f";
+  // let { walletaddress, privatekey } = props;
+
   let [shown, setshown] = useState(true);
   let [title, settitle] = useState();
   let [abstract, setabstract] = useState();
   let [path, setpath] = useState();
-  function plagiarismover(final, data) {
+
+  async function plagiarismover(final, data) {
     console.log("The plagiarism detection is over and we have got the results");
     console.log(final);
     console.log("This is the data for that given project");
+    console.log(data);
 
-    //If the msg is the plagiarism is not detected then change the projectstatus from pending to approved
-    //Otherwise if plagiarism is detected then in that case change the projectstatus to rejected
-    //Also remove the project from the project uploads after notifying the student that the project has not been approved
+    console.log(data.leadaccountaddress);
+
+    if (final.msg != "The plagiarism is not detected") {
+      console.log("The plagiarism has been detected");
+      //Do more things here
+      return;
+    }
+
+    //Now before the minting of the nft
+    //We need to first figure out the title and the abstract plagiarism
+    let titleplagiarism = parseInt(final.titlemaximumplagiarism);
+    let abstractplagiarism = parseInt(final.abstractmaximumplagiarism);
+
+    //Now this is the average plagiarism that is involved here
+    let avgplagiarism = (titleplagiarism + abstractplagiarism) / 2;
+
+    console.log("This is the average highest plagiarism that is detected");
+
+    let tokenURI;
+    if (avgplagiarism >= 0 && avgplagiarism <= 14) {
+      tokenURI =
+        "https://gateway.pinata.cloud/ipfs/QmWcwWiGjHW8kXqBw2X7JeECTyNMUF5L6rLR3ypPePVfM1";
+    }
+
+    if (avgplagiarism >= 15 && avgplagiarism <= 28) {
+      tokenURI =
+        "https://gateway.pinata.cloud/ipfs/QmWcwWiGjHW8kXqBw2X7JeECTyNMUF5L6rLR3ypPePVfM1";
+    }
+
+    if (avgplagiarism >= 29 && avgplagiarism <= 42) {
+      tokenURI =
+        "https://gateway.pinata.cloud/ipfs/QmWcwWiGjHW8kXqBw2X7JeECTyNMUF5L6rLR3ypPePVfM1";
+    }
+
+    if (avgplagiarism >= 43 && avgplagiarism <= 56) {
+      tokenURI =
+        "https://gateway.pinata.cloud/ipfs/QmWcwWiGjHW8kXqBw2X7JeECTyNMUF5L6rLR3ypPePVfM1";
+    }
+
+    if (avgplagiarism >= 57 && avgplagiarism <= 70) {
+      tokenURI =
+        "https://gateway.pinata.cloud/ipfs/QmWcwWiGjHW8kXqBw2X7JeECTyNMUF5L6rLR3ypPePVfM1";
+    }
+
+    console.log(titleplagiarism);
+    console.log(abstractplagiarism);
+    console.log(typeof titleplagiarism);
+    console.log(typeof abstractplagiarism);
+
+    console.log("This is the message that was received");
+    if (final.msg === "The plagiarism is not detected") {
+      //Now this is the time to mint the NFTs for the users
+      await fetch("http://localhost:3001/api/nft", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          adminaddress: walletaddress,
+          adminprivatekey: privatekey,
+          leadaddress: data.leadaccountaddress,
+          tokenURI,
+        }),
+      })
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          console.log(
+            "This is the data that is required from the backend for the nft"
+          );
+          console.log(data);
+        });
+    }
   }
 
   async function plagiarismchecking(data) {
@@ -41,7 +128,7 @@ export default function Showevent(props) {
 
     let final = await res.json();
     console.log("This is the response received from the backend");
-    plagiarismover(final, data);
+    await plagiarismover(final, data);
     console.log(final);
   }
 
@@ -63,28 +150,35 @@ export default function Showevent(props) {
     }
 
     console.log(data, "This is the project details");
-
+    const percentage = 66;
     return (
-      <div>
-        {data.data.title}
-        <br />
-        {data.data.abstract}
-        <br />
-        <a href={data.data.projecturl}>
-          {" "}
-          Click this link to download the project
-        </a>
-        <br />
-        {/* <label>Enter the path of the Desktop</label>;
+      <div className={classes.card}>
+        <div className={classes.upper}>
+          <div className={classes.details}>
+            <p>{data.data.title}</p>
+            <br />
+            {data.data.abstract}
+            <br />
+          </div>
+
+          <button className={classes.btn1} href={data.data.projecturl}>
+            {" "}
+            download the project
+          </button>
+          <br />
+          {/* <label>Enter the path of the Desktop</label>;
             <input
               value={path}
               onChange={(e) => {
                 setpath(e.target.value);
               }}
             ></input> */}
-        <button onClick={() => plagiarismchecking(data.data)}>
-          Check for plagiarism
-        </button>
+          <div className={classes.btnsection}>
+            <Button onClick={() => plagiarismchecking(data.data)}>
+              Check for plagiarism
+            </Button>
+          </div>
+        </div>
       </div>
     );
   }
@@ -116,9 +210,18 @@ export default function Showevent(props) {
   //For that we use the concept of react query
   console.log(data, "This is the data for the project details");
 
-  return data.data.map((ele) => {
-    return <DisplayProject obj={ele} />;
-  });
+  return (
+    <div className={classes.body}>
+      <Head />
+      <FinalDisplay />
+    </div>
+  );
+
+  function FinalDisplay() {
+    return data.data.map((ele) => {
+      return <DisplayProject obj={ele} />;
+    });
+  }
 
   // return null;
   // let title;

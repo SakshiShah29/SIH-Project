@@ -1,8 +1,11 @@
 {
-  "name": "server4",
+  "name": "adminlogin",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,9 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "socket.io": "^4.5.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.19"
+    "@alch/alchemy-web3": "^1.4.6",
+    "@openzeppelin/contracts": "^4.7.3",
+    "ethers": "^5.7.0"
   }
 }

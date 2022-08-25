@@ -4,8 +4,11 @@ import React, { useState, useEffect } from "react";
 
 import { useQuery } from "react-query";
 import os from "os";
+import { useContext } from "react";
+import { useWalletaddress } from "../../Stores/wallet-context";
 
 export default function Adminlogin() {
+  const { walletaddressfinal,setwalletaddressfinal } = useWalletaddress();
   let [address, setaddress] = useState("");
   let [privatekey, setprivatekey] = useState("");
   const [walletaddress, setwalletaddress] = useState("");
@@ -45,6 +48,7 @@ export default function Adminlogin() {
 
       console.log(accounts);
       setwalletaddress(accounts.toString());
+      setwalletaddressfinal(accounts.toString());
       //   let walletbalance = await state._web3.eth.getBalance(accounts.toString());
       //   setwalletbalance(state._web3.utils.fromWei(walletbalance, "ether"));
       setexists(true);

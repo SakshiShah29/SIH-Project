@@ -15,7 +15,7 @@ import SignupModal from '../Modals/SignupModal'
 
 
 
-const LandingPage = () => {
+const LandingPage = (props) => {
     const [isLogin, setIsLogin] = useState(false);
     const [isSignup,setIsSignup]=useState(false);
     const showLoginPage = () => {
@@ -36,7 +36,7 @@ const LandingPage = () => {
     return (
         < >
        
-            {isLogin && <LoginModal onLogin={loginHandler} />}
+            {isLogin && <LoginModal onLogin={loginHandler} walletaddress={props.walletaddress} setwalletaddress={props.setwalletaddress} />}
             {isSignup && <SignupModal onSignup={signupHandler}/>}
             <div className="navbar">
                 <div className="logo"> 

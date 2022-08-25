@@ -1,18 +1,24 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./homeCards.css";
 import { useNavigate } from "react-router-dom";
 import ProjectDetails from "../ProjectDetails/ProjectDetails";
+import ProjectContext from "../contexts/ProjectdetailProvider";
 const HomeCards = (props) => {
+  let obj=useContext(ProjectContext);
+  console.log("This is the object",obj);
+  let {projectdetails,setprojectdetails}=obj;
+  console.log('This is the project detail',projectdetails);
   const [cardclicked, setcardclicked] = useState(false);
 
   let { rest } = props;
-  console.log(
-    rest,
-    "This is the card data that was passed from the home cards"
-  );
+  // console.log(
+  //   rest,
+  //   "This is the card data that was passed from the home cards"
+  // );
   const navigate = useNavigate();
   const handleProjectHomeCLick = () => {
     // navigate("/ProjectDetails");
+    setprojectdetails(rest);
     setcardclicked(true);
   };
   return (
@@ -33,7 +39,7 @@ const HomeCards = (props) => {
         </div>
       )}
       {cardclicked && (
-        <ProjectDetails setcardclicked={setcardclicked} rest={rest} />
+        navigate('/ProjectDetails')
       )}
     </>
   );

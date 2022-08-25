@@ -58,7 +58,7 @@ function Completed(props) {
   function Cards() {
     if (finaldataarray.length == 0) {
       return (
-        <div>The data is still loading or no pending projects are found</div>
+        <div className={classes.body}>The data is still loading or no pending projects are found</div>
       );
     }
     return (

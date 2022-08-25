@@ -2,8 +2,10 @@ const express = require("express");
 const fs = require("fs");
 
 var data = fs.readFileSync(
+
   "H:/SIH-Project/Data.json",
   // "C:/Users/Sakshi Shah/OneDrive/Documents/GitHub-projects/SIH-Project/Data.json"
+
 );
 var myObject = JSON.parse(data);
 console.log(myObject, "This is the data file");
@@ -61,6 +63,7 @@ uploadrouter.post(
     console.log(req.body);
 
     var datajson = fs.readFileSync(
+
       "H:/SIH-Project/Data.json",
       // "C:/Users/Sakshi Shah/OneDrive/Documents/GitHub-projects/SIH-Project/Data.json"
 
@@ -127,6 +130,9 @@ uploadrouter.post(
             // "C:/Users/Bhaskar/Desktop/SIH-clone/SIH-Project/client/src/components/Data.json",
             "H:/SIH-Project/Data.json",
             // "C:/Users/Sakshi Shah/OneDrive/Documents/GitHub-projects/SIH-Project/Data.json"
+
+
+
             newData,
             (err) => {
               // error checking

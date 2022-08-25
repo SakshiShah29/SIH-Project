@@ -7,10 +7,13 @@ import HomeCards from "../homeCards/homeCards";
 import Pagination from "../pagination/pagination";
 import "../search/search.css";
 import filter from "../../images/filter.png";
+// import data from "../Data.json";
 import data from "../Data.json";
 import search from "../search/search";
 let searchword2 = "";
 let searchword = "";
+
+console.log("This is the data", data);
 
 //Firstly before entering the home page we need to see whether the user is signed in or not
 
@@ -22,6 +25,7 @@ export default function Homepage() {
   const initial = () => {
     let studentuniversity = "Chandubhai S. Patel Institute of Technology";
     return data.filter((value) => {
+      console.log(value);
       return value.university
         .toLowerCase()
         .includes(studentuniversity.toLowerCase());
@@ -130,7 +134,7 @@ export default function Homepage() {
           </button>
         </div>
         {console.log(filtereddata, "ThiS is the filtered data1")}
-        {filtereddata.length !== 0 &&
+        <div className="cards">{filtereddata.length !== 0 &&
           filtereddata.map((ele) => {
             return (
               <HomeCards
@@ -139,7 +143,7 @@ export default function Homepage() {
                 rest={ele}
               />
             );
-          })}
+          })}</div>
 
         <Pagination />
       </div>

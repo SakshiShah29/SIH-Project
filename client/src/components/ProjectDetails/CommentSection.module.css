@@ -2,12 +2,18 @@
 
 .comments {
     margin-top: 20px;
+    
   }
   .upper{
     display:flex;
     justify-content: space-between;
+    
   }
   
+  .upper>h3{
+    background-color: #2B3566;
+    overflow-y: hidden;
+  }
   .commentsTitle {
     font-size: 25px;
 color:#fff;
@@ -25,6 +31,7 @@ color:#fff;
   }
   .commentsContainer {
     margin-top: 40px;
+    
   }
   
   .formContainer{
@@ -32,13 +39,24 @@ color:#fff;
     display: flex;
     justify-content: center;
     padding-bottom: 30px;
+    
   }
   
   .commentFormTextarea {
-  width:100%;
+  width:100% !important;
     height: 100px;
   padding-left: 40px;
     
+  }
+  .comment{
+    margin:40px;
+    margin-left:100px;
+    width:80%;
+    padding: 18px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #27305c, #2e396d);
+box-shadow:  20px 20px 60px #252d57,
+             -20px -20px 60px #313d75;
   }
   
 
@@ -69,19 +87,7 @@ color:#fff;
     margin-left: 10px;
   }
   
-  
-  .comment {
-    display: flex;
-    padding-left:18px;
-    border-radius: 15px;
-background: #2B3566;
-box-shadow: inset 35px 35px 70px #1a203d,
-            inset -35px -35px 70px #3c4a8f;
-    margin-bottom: 18px;
-    width:90%;
- margin-left: 28px;
 
-  }
   
   .commentImageContainer {
     margin-right: 12px;

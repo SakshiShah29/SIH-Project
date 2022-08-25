@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
@@ -6,35 +6,51 @@ import LandingPage from "./components/landingPage/LandingPage";
 import Navbar from "./components/Navbar/Navbar";
 import Profilepage from "./components/Profilepage/Profilepage";
 import HomePage from "./components/homePage/homePage";
-// import ProjectUpload from './components/projectUpload/projectUpload';
 import ProjectDetails from "./components/ProjectDetails/ProjectDetails";
 import Completed from "./components/Profilepage/Completed ";
 import Ongoing from "./components/Profilepage/Ongoing";
 import Remaining from "./components/Profilepage/Remaining";
-// import UploadProject from "./components/ipfs/UploadProject2";
-// import Chat from "./components/Chat/Chat";
 import Wallet from "./components/ipfs/connectwallet";
 import Auth from "./components/Auth/Auth.jsx";
-import Chatapplication from "./components/Chatapplicationfinal/Chat.jsx";
-import Profileid from "./components/Chatapplication2/Profileid";
-import Chat from "./components/Chatapplication2/Chat";
 import Showevent from "./components/loginPage/Showevents";
 
+import ProjectContext from "./components/contexts/ProjectdetailProvider";
+// import WalletContext from "./Stores/wallet-context";
+
+
+
+
+
 function App() {
+  let [walletaddress,setwalletaddress]=useState('')
+  let [projectdetails,setprojectdetails]=useState({})
+
   return (
     <>
       {/* <Profilepage /> */}
+      <ProjectContext.Provider value={{projectdetails,setprojectdetails}}>
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/Showevent" element={<Showevent />} />
-          {/* <Route path="/Chat" element={<Chatapplication />} /> */}
+
+          <Route
+            path="/Showevent"
+            element={<Showevent walletaddress={walletaddress} />}
+          />
+          {/* // <Route path="/Chat" element={<Chatapplication />} /> */}
           {/* <Route path="/" element={<Chatapplication />} /> */}
           {/* <Route path="/" element={<Chatlogin />} /> */}
-          <Route path="/landingPage" element={<LandingPage />} />
+          <Route
+            path="/landingPage"
+            element={
+              <LandingPage
+                walletaddress={walletaddress}
+                setwalletaddress={setwalletaddress}
+              />
+            }
+          />
           {/*<Route path="/projectUpload" element={<ProjectUpload />} />*/}
           <Route path="/ProjectDetails" element={<ProjectDetails />} />
-          <Route path="/Chatprofile" element={<Chat />} />
           <Route
             path="/ProfilePage"
             element={
@@ -76,6 +92,7 @@ function App() {
           {/* <Route path="/Chat" element={<Chat />}></Route> */}
         </Routes>
       </Router>
+      </ProjectContext.Provider>
     </>
   );
 }

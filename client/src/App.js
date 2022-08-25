@@ -31,7 +31,7 @@ function App() {
       <ProjectContext.Provider value={{ projectdetails, setprojectdetails }}>
         <Router>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/homePage" element={<HomePage />} />
             <Route path="/filter" element={<Filter />} />
 
             <Route
@@ -42,7 +42,7 @@ function App() {
             {/* <Route path="/" element={<Chatapplication />} /> */}
             {/* <Route path="/" element={<Chatlogin />} /> */}
             <Route
-              path="/landingPage"
+              path="/"
               element={
                 <LandingPage
                   walletaddress={walletaddress}

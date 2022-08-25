@@ -123,12 +123,12 @@ export default function Homepage() {
             placeholder="Search Your Project by typing the title Here"
             onChange={handlefilterdata}
           />
-          <input
+          {/* <input
             id="search"
             type="text"
             placeholder="Search Your Project by typing the university Here"
             onChange={handlefilterdata2}
-          />
+          /> */}
           <button className="button-filter">
             <img src={filter} alt="" />
           </button>

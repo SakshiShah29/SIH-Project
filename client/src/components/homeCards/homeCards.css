@@ -1,4 +1,4 @@
-.homeCard{
+.homeCard {
     color: #fff;
     background-color: #232B53;
     border-radius: 9px;
@@ -7,64 +7,42 @@
     width: 24rem;
     cursor: pointer;
 }
-.bg-color{
+
+.bg-color {
     background-color: #48CCC6 !important;
 }
-.cardTitle{
+
+.cardTitle {
     font-weight: 600;
     font-size: 21px;
 }
-.cardSubtitle{
+
+.cardSubtitle {
     font-weight: 100;
     font-size: 14px;
     margin-top: -20px !important;
 }
-.tech-stack{
+
+.tech-stack-home {
+    display: flex;
     color: #A4A4A4;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 200;
 }
-.tech-stack > p{
-    display: flex;
+
+.tech-stack-home>p {
     flex-wrap: wrap;
-    
+    font-size: 15px;
 }
 
-.tech-stack > p:nth-child(1):before{
-    content: '';
+.circle {
     display: inline-block;
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background-color: #FD4A71;
     opacity: 0.8;
-    padding-right: -50px;
-}
-.tech-stack > p:nth-child(2):before{
-    content: '';
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #684BFE;
-    opacity: 0.8;
-    
-}
-.tech-stack > p:nth-child(3):before{
-    content: '';
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #48CCC6;
-    opacity: 0.8;
-}
-.tech-stack > p:nth-child(4):before{
-    content: '';
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #48CCC6;
-    opacity: 0.8;
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+    /* padding-right: -50px; */
 }

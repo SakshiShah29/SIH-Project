@@ -35,7 +35,7 @@ const expandingTransition = {
 function AccountBox(props) {
   const [isExpanded, setExpanded] = useState(false);
   const [active, setActive] = useState("student");
-  const [addClass, setAddClass]=useState("false")
+  const [addClass, setAddClass] = useState("false")
   const playExpandingAnimation = () => {
     setExpanded(true);
     setTimeout(() => {
@@ -57,7 +57,7 @@ function AccountBox(props) {
     }, 400);
   };
 
-  const addingTheClass=()=>{
+  const addingTheclassName = () => {
     setAddClass(true)
   }
   const contextvalue = { switchToAdmin, switchToStudent };
@@ -66,23 +66,23 @@ function AccountBox(props) {
     <AccountContext.Provider value={contextvalue}>
       <div className={classes.boxcontainer}>
         <div className={classes.topcontainer}>
-        <div className={classes.top}>
-        <a className={classes.student} onClick={switchToStudent}>Student</a>
-        <a className={classes.admin} onClick={switchToAdmin }>Admin</a>
-        </div>
+          <div className={classes.top}>
+            <a className={classes.student} onClick={switchToStudent}>Student</a>
+            <a className={classes.admin} onClick={switchToAdmin}>Admin</a>
+          </div>
           <motion.div
             className={classes.backdrop}
             animate={isExpanded ? "expanded" : "collapsed"}
             initial={false}
             variants={backdropVariants}
           />
-         
+
         </div>
         <div className={classes.innercontainer}>
           {active === "student" && <Loginform />}
-          {active === "admin" && <Adminlogin walletaddress={props.walletaddress} setwalletaddress={props.setwalletaddress}/>}
+          {active === "admin" && <Adminlogin walletaddress={props.walletaddress} setwalletaddress={props.setwalletaddress} />}
         </div>
-        <Marginer direction="vertical" margin="1em"/>
+        <Marginer direction="vertical" margin="1em" />
       </div>
     </AccountContext.Provider>
   );

@@ -4,8 +4,8 @@ const Card = (props) => {
   //We need to pass some data inside these cards
   let { title, abstract } = props;
   return (
-    <div class="homeCard">
-      <span class="badge rounded-pill bg-color text-bg-primary">
+    <div className="homeCard">
+      <span className="badge rounded-pill bg-color text-bg-primary">
         {props.tag}
       </span>
       <p className="cardTitle">{title}</p>

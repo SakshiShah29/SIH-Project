@@ -147,21 +147,21 @@ export default function Uploadproject() {
             </div>
 
           </div>
-          <div class="dropdown mb-3">
-            <button class="input-project-upload text-left" type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ textAlign: "left" }}>
+          <div className="dropdown mb-3">
+            <button className="input-project-upload text-left" type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ textAlign: "left" }}>
               Technology Stack
             </button>
-            <ul class="dropdown-menu">
-              <li onClick={handleSelectStack} class="dropdown-item">Mobile Application Development</li>
-              <li onClick={handleSelectStack} class="dropdown-item">Web Development</li>
-              <li onClick={handleSelectStack} class="dropdown-item">Cyber Security</li>
-              <li onClick={handleSelectStack} class="dropdown-item">Machine Learning</li>
-              <li onClick={handleSelectStack} class="dropdown-item">Artificial Intelligence</li>
-              <li onClick={handleSelectStack} class="dropdown-item">Data Science</li>
-              <li onClick={handleSelectStack} class="dropdown-item">Devops</li>
-              <li onClick={handleSelectStack} class="dropdown-item">Cloud Computing</li>
-              <li onClick={handleSelectStack} class="dropdown-item">Blockchain</li>
-              <li onClick={handleSelectStack} class="dropdown-item">IOT</li>
+            <ul className="dropdown-menu">
+              <li onClick={handleSelectStack} className="dropdown-item">Mobile Application Development</li>
+              <li onClick={handleSelectStack} className="dropdown-item">Web Development</li>
+              <li onClick={handleSelectStack} className="dropdown-item">Cyber Security</li>
+              <li onClick={handleSelectStack} className="dropdown-item">Machine Learning</li>
+              <li onClick={handleSelectStack} className="dropdown-item">Artificial Intelligence</li>
+              <li onClick={handleSelectStack} className="dropdown-item">Data Science</li>
+              <li onClick={handleSelectStack} className="dropdown-item">Devops</li>
+              <li onClick={handleSelectStack} className="dropdown-item">Cloud Computing</li>
+              <li onClick={handleSelectStack} className="dropdown-item">Blockchain</li>
+              <li onClick={handleSelectStack} className="dropdown-item">IOT</li>
             </ul>
           </div>
 
@@ -188,9 +188,9 @@ export default function Uploadproject() {
           </div>
           <div className="mb-3">
             <label className="label-project-upload">Other Creators</label>
-            <div class="input-group mb-3">
-              <input type="email" class="input-group input-project-upload" placeholder="Email ID of other creators" id="project-upload-field" style={{ width: "46.5rem" }} />
-              <span class="input-group-text" id="basic-addon2" onClick={addCollaboratorsArray}>Add</span>
+            <div className="input-group mb-3">
+              <input type="email" className="input-group input-project-upload" placeholder="Email ID of other creators" id="project-upload-field" style={{ width: "46.5rem" }} />
+              <span className="input-group-text" id="basic-addon2" onClick={addCollaboratorsArray}>Add</span>
             </div>
 
           </div>
@@ -209,7 +209,7 @@ export default function Uploadproject() {
                 value={projectcompletion}
                 onChange={handleStatusChange}
               />
-              <label className="form-check-label" for="inlineCheckbox2">
+              <label className="form-check-label" htmlFor="inlineCheckbox2">
                 Completed
               </label>
             </div>
@@ -222,12 +222,12 @@ export default function Uploadproject() {
                 value={projectcompletion}
                 onChange={handleStatusChange}
               />
-              <label className="form-check-label" for="inlineCheckbox1">
+              <label className="form-check-label" htmlFor="inlineCheckbox1">
                 OnGoing
               </label>
             </div>
           </div>
-          <div class="upload-to-ipfs">
+          <div className="upload-to-ipfs">
             <label className="label-project-upload">Upload Project <span className="cumpulsory">*</span> </label>
             <Ipfs url={seturl} />
           </div>

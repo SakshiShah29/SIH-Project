@@ -1,114 +1,119 @@
-.boxcontainer{
-    width:100%;
+.boxcontainer {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
 }
 
-.formcontainer{
+.formcontainer {
     width: 100%;
     display: flex;
     flex-direction: column;
-    
+
 
 }
 
-.mutedlink{
+.mutedlink {
     font-size: 15px;
-    color:#fff;
+    color: #fff;
     font-weight: 500;
     text-decoration: none;
     margin-left: 250px;
     margin-top: -10px;
 }
 
-.boldlink{
+.boldlink {
     font-size: 12px;
-    color: rgba(104,75,254,1);
+    color: rgba(104, 75, 254, 1);
     font-weight: 500;
     text-decoration: none;
 }
 
-.inputcontainer{
+.inputcontainer {
     outline-style: hidden;
-border-top: none;
-border-left: none;
-border-right: none;
-width:100%;
-height:60px;
-outline:none;
-background: #111634;
-margin-bottom: 20px;
-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-border-radius: 8px;
-padding:0px 30px;
-border-bottom:2px solid transparent;
-transition: all 200ms ease-in-out ;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    height: 60px;
+    outline: none;
+    background: #111634;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 0px 30px;
+    color: rgba(200, 200, 200, 1);
+    border-bottom: 2px solid transparent;
+    transition: all 200ms ease-in-out;
 }
 
-.inputcontainer::placeholder{
-    color:rgba(200,200,200,1);
+.inputcontainer::placeholder {
+    color: rgba(200, 200, 200, 1);
 }
-.inputcontainer:not(:last-of-type){
-    border-bottom:2.5px solid rgba(200,200,200,0.4);
+
+.inputcontainer:not(:last-of-type) {
+    border-bottom: 2.5px solid rgba(200, 200, 200, 0.4);
 
 }
 
-.inputcontainer:focus{
-    outline:none;
-    border-bottom: 3px solid rgba(104,75,254,1);
-    background-color: #fff;
+.inputcontainer:focus {
+    outline: none;
+    border-bottom: 3px solid rgba(104, 75, 254, 1);
+    color: rgba(200, 200, 200, 1);
 }
 
-.submitbutton1{
+.submitbutton1 {
     display: flex;
     justify-content: space-around;
-    width:100%;
-    padding:14px 30%;
-    
-    color:#fff;
+    width: 100%;
+    padding: 14px 30%;
+
+    color: #fff;
     font-size: 15px;
     font-weight: 600;
-border:none;
-border-radius: 5px;
-cursor:pointer;
-transition:all, 240ms ease-in-out;
-background:  #684BFE;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all, 240ms ease-in-out;
+    background: #684BFE;
 
 }
 
-.submitbutton1:hover{
-    border: 2px solid #684BFE;
-    background-color: transparent;
+.submitbutton1:hover {
+    background-color: #694bfea6;
+    color: #fff;
 }
 
-.submitbutton2{
+.submitbutton2 {
     display: flex;
-align-items: center;
-justify-content: center;
-    width:100%;
-    padding:8px 0%;
-   
-    color:#fff;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 8px 0%;
+
+    color: #fff;
     font-size: px;
     font-weight: 600;
-border:none;
-border-radius: 5px;
-cursor:pointer;
-transition:all, 240ms ease-in-out;
-background-color: transparent;
-border: 2px solid #684BFE;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all, 240ms ease-in-out;
+    background-color: transparent;
+    border: 2px solid #684BFE;
 }
-.submitbutton2>img{
+
+.submitbutton2>img {
     margin-right: 8px;
     height: 25px;
 }
-.submitbutton2:hover{
+
+.submitbutton2:hover {
     background-color: #684BFE;
 }
 
-p{
+p {
     font-size: 18px;
-    color:#fff;
-    font-weight: 500;}
+    color: #fff;
+    font-weight: 500;
+}

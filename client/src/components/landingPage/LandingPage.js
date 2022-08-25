@@ -17,7 +17,7 @@ import SignupModal from '../Modals/SignupModal'
 
 const LandingPage = (props) => {
     const [isLogin, setIsLogin] = useState(false);
-    const [isSignup,setIsSignup]=useState(false);
+    const [isSignup, setIsSignup] = useState(false);
     const showLoginPage = () => {
         setIsLogin(true)
     };
@@ -26,20 +26,20 @@ const LandingPage = (props) => {
         setIsLogin(false);
     }
 
-    const showSignUp=()=>{
+    const showSignUp = () => {
         setIsSignup(true);
     }
 
-    const signupHandler=()=>{
+    const signupHandler = () => {
         setIsSignup(false)
     }
     return (
         < >
-       
+
             {isLogin && <LoginModal onLogin={loginHandler} walletaddress={props.walletaddress} setwalletaddress={props.setwalletaddress} />}
-            {isSignup && <SignupModal onSignup={signupHandler}/>}
+            {isSignup && <SignupModal onSignup={signupHandler} />}
             <div className="navbar">
-                <div className="logo"> 
+                <div className="logo">
                     <p>Sahayog</p>
                 </div>
                 <div className="menu-items">
@@ -47,8 +47,8 @@ const LandingPage = (props) => {
                     <button onClick={showSignUp} className="btn-outline-landingPage">Sign Up</button>
                 </div>
             </div>
-           
-            <div className="landing-page d-flex flex-column justify-content-center align-items-center pt-5">
+
+            <div className="landing-page d-flex flex-column justify-content-center align-items-center">
 
                 <CardLandingPage onClick={showLoginPage} imageName={vsCodeVariable} />
 
@@ -60,9 +60,9 @@ const LandingPage = (props) => {
                 <CardLandingPage onClick={showLoginPage} imageName={post5} />
 
             </div>
-           
+
             <Footer />
-            
+
         </>
     )
 }

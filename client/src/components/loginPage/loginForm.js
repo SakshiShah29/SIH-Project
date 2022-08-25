@@ -6,7 +6,7 @@ import classes from "./Login.module.css";
 import google from "../../images/google.png"
 import { Marginer } from "./marginer";
 import 'react-toastify/dist/ReactToastify.css';
-import {ToastContainer,toast} from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 function Loginform(props) {
   const [data, setData] = useState({ email: "None", password: "None" });
   const [email, setEmail] = useState("");
@@ -40,7 +40,7 @@ function Loginform(props) {
     console.log("Now the cookie is going to be assigned");
     document.cookie = `jwt=${res.token};max-age=1800;`;
     if (res.error) {
-      toast.error(res.error , {
+      toast.error(res.error, {
         position: toast.POSITION.BOTTOM_LEFT
       });
     } else {
@@ -48,10 +48,10 @@ function Loginform(props) {
       //Hence we can see the token of the user
       console.log(res.Connection);
       console.log();
-      toast.success("Login Successfull!" , {
+      toast.success("Login Successfull!", {
         position: toast.POSITION.BOTTOM_LEFT
       });
-      navigate("/");
+      navigate("/homePage");
 
       //At this stage just route the user to the home page of the application
     }
@@ -86,7 +86,7 @@ function Loginform(props) {
           }}
         />
       </form>
-   
+
       <a className={classes.mutedlink} href="#">
         Forget your password?
       </a>
@@ -99,15 +99,15 @@ function Loginform(props) {
         Login
       </button>
       <Marginer direction="vertical" margin="1em" />
-      <button
+      {/* <button
         className={classes.submitbutton2}
         type="submit"
         onClick={Submitted}
       >
         <img src={google}></img> Connect with Google
-      </button>
+      </button> */}
       <Marginer direction="vertical" margin="2em" />
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 }

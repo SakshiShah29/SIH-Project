@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
-import { useMoralis, useMoralisFile } from "react-moralis";
+// import { useMoralis, useMoralisFile } from "react-moralis";
 // import getWeb3 from "./getWeb3";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import storeFiles from "./ipfs2";
@@ -22,17 +22,17 @@ export default function Ipfs(props) {
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
 
-  const { saveFile } = useMoralisFile();
+  // const { saveFile } = useMoralisFile();
   // console.log("This is the save file function", saveFile);
   let accounts = useRef(0);
-  const {
-    authenticate,
-    isAuthenticated,
-    isAuthenticating,
-    user,
-    account,
-    logout,
-  } = useMoralis();
+  // const {
+  //   authenticate,
+  //   isAuthenticated,
+  //   isAuthenticating,
+  //   user,
+  //   account,
+  //   logout,
+  // } = useMoralis();
 
   // useEffect(() => {
   //   if (window.ethereum) {

@@ -137,7 +137,7 @@ const UploadProject = () => {
                 value="option2"
                 onChange={handleStatusChange}
               />
-              <label className="form-check-label" for="inlineCheckbox2">
+              <label className="form-check-label" htmlFor="inlineCheckbox2">
                 Completed
               </label>
             </div>
@@ -150,7 +150,7 @@ const UploadProject = () => {
                 value="option1"
                 onChange={handleStatusChange}
               />
-              <label className="form-check-label" for="inlineCheckbox1">
+              <label className="form-check-label" htmlFor="inlineCheckbox1">
                 OnGoing
               </label>
             </div>

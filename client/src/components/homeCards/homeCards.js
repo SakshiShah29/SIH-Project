@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 import ProjectDetails from "../ProjectDetails/ProjectDetails";
 import ProjectContext from "../contexts/ProjectdetailProvider";
 const HomeCards = (props) => {
-  let obj=useContext(ProjectContext);
-  console.log("This is the object",obj);
-  let {projectdetails,setprojectdetails}=obj;
-  console.log('This is the project detail',projectdetails);
+  let obj = useContext(ProjectContext);
+  console.log("This is the object", obj);
+  let { projectdetails, setprojectdetails } = obj;
+  console.log('This is the project detail', projectdetails);
   const [cardclicked, setcardclicked] = useState(false);
 
   let { rest } = props;
@@ -30,11 +30,11 @@ const HomeCards = (props) => {
           </span>
           <p className="cardTitle">{props.title}</p>
           <p className="cardSubtitle">{props.university}</p>
-          <div className="tech-stack">
-            <p> Machine Learning</p>
-            <p> LSTM</p>
-            <p> Python</p>
-            <p> NLP</p>
+          <div className="tech-stack-home">
+            <p> <span className="d-inline-block circle"></span> Machine Learning</p>
+            <p> <span className="d-inline-block circle"></span> LSTM</p>
+            <p> <span className="d-inline-block circle"></span> Python</p>
+            <p> <span className="d-inline-block circle"></span> NLP</p>
           </div>
         </div>
       )}

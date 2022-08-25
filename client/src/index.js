@@ -6,20 +6,19 @@ import { QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import clients from "./client";
 import store from "./store/ReduxStore";
-import { MoralisProvider } from "react-moralis";
+// import { MoralisProvider } from "react-moralis";
 // import "bootstrap/dist/css/bootstrap.min.css";
-
+{/* <MoralisProvider
+          serverUrl="https://6ce1rqhctc4k.usemoralis.com:2053/server"
+          appId="bdOcQnM593v6lbT7U4X0mOwWvKw3nQuNbNGVbCMw"
+        > */}
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
       <QueryClientProvider client={clients}>
         <ReactQueryDevtools />
-        <MoralisProvider
-          serverUrl="https://6ce1rqhctc4k.usemoralis.com:2053/server"
-          appId="bdOcQnM593v6lbT7U4X0mOwWvKw3nQuNbNGVbCMw"
-        >
-          <App />
-        </MoralisProvider>
+
+        <App />
       </QueryClientProvider>
     </React.StrictMode>
   </Provider>,

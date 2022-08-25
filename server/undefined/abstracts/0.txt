@@ -1,1 +1,1 @@
-This is a simple react application where we have used the concept of hooks. In this application the users can log in their daily tasks and even update and delete them
+This is a simple to do list application using the concept of react hooks. In this the users can log in their daily tasks and can even update and delete them

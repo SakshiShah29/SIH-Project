@@ -1,0 +1,51 @@
+.filter-main {
+    background-color: #2B3566;
+    width: 65vw;
+    margin: auto;
+    color: #fff;
+    padding: 4rem;
+    border-radius: 10px;
+}
+
+.filter-radio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter-domain {
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+
+.filter-domain input {
+    margin-right: 1rem;
+}
+
+.filter-domain label {
+    margin-right: 1.5rem;
+}
+
+.btn-outline-filter {
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #684BFE;
+    /* outline: 1px solid #684BFE; */
+    padding: 0.5rem 2rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.btn-filter {
+    background-color: #684BFE;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 2rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}

@@ -11,16 +11,19 @@ import { useWalletaddress } from "../../Stores/wallet-context";
 import { useNavigate } from "react-router";
 import Showevent from "./Showevents";
 
+let privatekey='0c7fcfbf8330ec840cae0000ba1553f5bcd6070e51747c72c24412b5979fda8f'
+let path='C:/Users/Sakshi Shah/OneDrive/Desktop/COLLEGE'
+
 export default function Adminlogin(props) {
   let walletaddressfinal = props.walletaddress;
   let setwalletaddressfinal = props.setwalletaddress;
   let [address, setaddress] = useState("");
-  let [privatekey, setprivatekey] = useState("");
+  // let [privatekey, setprivatekey] = useState("");
   const [walletaddress, setwalletaddress] = useState("");
   const [walletbalance, setwalletbalance] = useState("");
   const [exists, setexists] = useState(false);
   const [pending, setshowpending] = useState(false);
-  let [path, setpath] = useState();
+  // let [path, setpath] = useState();
   let nav = useNavigate();
   let [isLoading, setisLoading] = useState();
 
@@ -315,43 +318,57 @@ export default function Adminlogin(props) {
         <button className={classes.submitbutton1} onClick={connectwallet}>
           Connect to the wallet
         </button>
+        
       )}
       <Marginer direction="vertical" margin="1em" />
-
       {exists && !pending && (
-        <div>
-          <p>{walletaddress}</p>
-          <p>{walletbalance}</p>
-
-          <input
-            className={classes.inputcontainer}
-            type={"password"}
-            value={privatekey}
-            placeholder="Enter your private key"
-            onChange={(e) => {
-              setprivatekey(e.target.value);
-            }}
-          ></input>
           <div>
-            <input
-              className={classes.inputcontainer}
-              value={path}
-              placeholder="Enter the path of desktop"
-              onChange={(e) => {
-                setpath(e.target.value);
-              }}
-            ></input>
-            ;
+           
+            <button className={classes.submitbutton1} onClick={login}>
+              Login
+            </button>
           </div>
-
-          <button className={classes.submitbutton1} onClick={login}>
-            Login
-          </button>
-        </div>
-      )}
+        )}
       {pending && nav("/Showevent")}
     </div>
   );
 }
 
 // <Showevent walletaddress={walletaddress} />
+
+
+// <input
+//             className={classes.inputcontainer}
+//             type={"password"}
+//             // value={privatekey}
+//             placeholder="Enter your private key"
+//             onChange={(e) => {
+//               // setprivatekey(e.target.value);
+//             }}
+//           ></input>
+//           <div>
+//             <input
+//               className={classes.inputcontainer}
+//               value={path}
+//               placeholder="Enter the path of desktop"
+//               onChange={(e) => {
+//                 setpath(e.target.value);
+//               }}
+//             ></input>
+//             ;
+//           </div>
+
+
+
+// {exists && !pending && (
+//   <div>
+//     <p>{walletaddress}</p>
+//     <p>{walletbalance}</p>
+
+    
+
+//     <button className={classes.submitbutton1} onClick={login}>
+//       Login
+//     </button>
+//   </div>
+// )}

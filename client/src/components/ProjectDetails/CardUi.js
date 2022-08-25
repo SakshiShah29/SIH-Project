@@ -11,7 +11,7 @@ const CardUi = (props) => {
         <p className="cardSubtitle">{rest.university}</p>
       </div>
 
-      <div className="tech-stack">
+      <div className="tech">
         <h4>Technology Stack:</h4>
         <p> Machine Learning</p>
         <p> LSTM</p>

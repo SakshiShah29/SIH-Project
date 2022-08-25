@@ -25,7 +25,7 @@ const DragAndDrop = (props) => {
 
   return (
     <>
-      <div className="container">
+      <div className="container-drag">
         <div
           className="drop-container"
           onDragOver={dragOver}

@@ -1,8 +1,4 @@
-.container {
-  transform: translateY(-100%);
-}
-
-.container p {
+.container-drag p {
   color: red;
   text-align: center;
 }
@@ -12,7 +8,9 @@
   align-items: center;
   justify-content: center;
   margin: 0;
+  padding-left: 0 !important;
   width: 800px;
+  border-radius: 8px;
   height: 200px;
   border: 4px dashed #4aa1f3;
 }

@@ -1,48 +1,56 @@
-
-.landing-page{
+.landing-page {
     background-color: #111634;
     color: white;
     z-index: 800;
 }
-.cardLandingPage{
+
+.cardLandingPage {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 75%;
     margin: 10rem auto;
 }
-.cardLandingPage > img{
-    
+
+.cardLandingPage>img {
+
     height: 263.43px;
     width: 495.92px;
 }
-.landing-page:first-child > img{
+
+.landing-page:first-child>img {
     height: 441px;
     width: 761px;
     border-radius: 20px;
 }
-.card-body{
+
+.card-body {
     margin-right: 5px;
     width: 650px;
 }
-.card-title-landingPage{
+
+.card-title-landingPage {
     font-size: 40px;
 }
-.card-text-landingPage{
+
+.card-text-landingPage {
     font-size: 18px;
     width: 500px;
     text-align: justify;
     margin-bottom: 40px;
 }
-.navbar{
-    background-color:  #030824;
- }
-.logo{
+
+.navbar {
+    background-color: #030824;
+}
+
+.logo {
     font-size: 2rem;
     margin-left: 1rem;
     color: #fff;
 }
-.buttons{
+
+.buttons {
     text-decoration: none;
     color: #fff;
     background-color: #684BFE;
@@ -52,14 +60,17 @@
     font-size: 1.3rem;
     font-weight: 500;
 }
-.buttons:hover{
+
+.buttons:hover {
     background-color: #694bfea6;
     color: #fff;
 }
-.arrow-img{
+
+.arrow-img {
     filter: invert(1);
     margin-left: 1rem;
 }
+
 .btn-landingPage {
     background-color: #684BFE;
     color: #fff;
@@ -70,29 +81,32 @@
     font-size: 1.3rem;
     font-weight: 500;
 }
+
 .btn-landingPage:hover {
     background-color: #694bfea6;
 }
+
 .btn-outline-landingPage {
     color: #fff;
     background-color: transparent;
     outline: 1px solid #684BFE;
     border: none;
-    padding: 0.7rem 1.5rem;
+    padding: 0.6rem 1.5rem;
     margin-right: 1rem;
     border-radius: 10px;
     font-size: 1.3rem;
     font-weight: 500;
 }
+
 .btn-outline-landingPage:hover {
     color: #fff;
     background-color: #684BFE;
 }
-.footer{
+
+.footer {
     text-align: center;
     background-color: #030824;
     font-size: 3.5rem;
     padding: 2rem;
     color: #fff;
 }
-

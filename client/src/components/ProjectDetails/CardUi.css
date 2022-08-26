@@ -1,48 +1,53 @@
-.Card{
+.Card {
     background: #111634;
-    width:30%;
-    height:30%;
-  margin: 10px;;
-  border: 2px solid #684BFE;
-/* filter: blur(4px); */
-border-radius: 15px;
-}
-.upper{
-    display:flex;
-   justify-content: flex-start;
-    padding:12px;
+    width: 30%;
+    height: 30%;
+    margin: 10px;
+    border: 2px solid #684BFE;
+    /* filter: blur(4px); */
+    border-radius: 15px;
 }
 
-.uni{
-    height:28px;
-    width:28px;
-margin-top: -05px;
+.upper {
+    display: flex;
+    justify-content: flex-start;
+    padding: 12px;
 }
-.cardSubtitle{
-    color:#fff !important;
+
+.uni {
+    height: 28px;
+    width: 28px;
+    margin-top: -05px;
+}
+
+.cardSubtitle {
+    color: #fff !important;
     font-size: 18px !important;
     font-weight: 500 !important;
     padding-left: 15px;
     padding-top: 14px;
 }
 
-.tech-stack{
+.tech-stack {
     color: #A4A4A4;
     font-size: 17px;
     font-weight: 200;
-    margin-left: 10px;;
-}
-.tech-stack > h4{
-    font-size: 18px;
-    margin-left: -60px;;
+    margin-left: 10px;
+    ;
 }
 
-.tech-stack > p{
+.tech-stack>h4 {
+    font-size: 18px;
+    margin-left: -60px;
+    ;
+}
+
+.tech-stack>p {
     display: inline-block;
     margin-right: 3.5rem;
 }
 
-.tech-stack > p:nth-child(1):before{
+.tech-stack>p:nth-child(1):before {
     content: '';
     display: inline-block;
     width: 15px;
@@ -51,7 +56,8 @@ margin-top: -05px;
     background-color: #FD4A71;
     opacity: 0.8;
 }
-.tech-stack > p:nth-child(2):before{
+
+.tech-stack>p:nth-child(2):before {
     content: '';
     display: inline-block;
     width: 15px;
@@ -60,7 +66,8 @@ margin-top: -05px;
     background-color: #684BFE;
     opacity: 0.8;
 }
-.tech-stack > p:nth-child(3):before{
+
+.tech-stack>p:nth-child(3):before {
     content: '';
     display: inline-block;
     width: 15px;
@@ -69,7 +76,8 @@ margin-top: -05px;
     background-color: #48CCC6;
     opacity: 0.8;
 }
-.tech-stack > p:nth-child(4):before{
+
+.tech-stack>p:nth-child(4):before {
     content: '';
     display: inline-block;
     width: 15px;
@@ -78,23 +86,28 @@ margin-top: -05px;
     background-color: #FD4A71;
     opacity: 0.8;
 }
-.collaborators{
+
+.collaborators {
     margin-left: 18px;
 }
-.collaborators >h4{
+
+.collaborators>h4 {
     font-size: 18px;
-    color:#fff;
-    margin-left: -65px;;
-    
+    color: #fff;
+    margin-left: -65px;
+    ;
+
 }
-.images{
+
+.images {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 14px;
 }
-.images > img{
-    height:40px;
-    width:40px;
+
+.images>img {
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     margin-right: 15px;
 }

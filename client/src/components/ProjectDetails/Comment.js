@@ -11,32 +11,33 @@ const Comment = ({ comment, replies, currentUserId, deleteComment }) => {
 
   return (
     <div className={classes.mainContainer}>
-    <div className={classes.comment}>
-      <div className={classes.commentImageContainer}>
-        <img src={avatar} alt="" />
-      </div>
-      <div className={classes.commentRightPart}>
-        <div className={classes.commentContent}>
-          <div className={classes.commentAuthor}>{comment.username}</div>
-          <div className={classes.date}>{createdAt}</div>
+      <div className={classes.comment}>
+        <div className={classes.commentImageContainer}>
+          <img src={avatar} alt="" />
         </div>
-        <div className={classes.commentText}>{comment.body}</div>
-        
-        {replies.length > 0 && (
-          <div className={classes.replies}>
-            {replies.map((reply) => (
-              <Comment
-                comment={reply}
-                key={reply.id}
-                replies={[]}
-                currentUserId={currentUserId}
-                deleteComment={deleteComment}
-              />
-            ))}
+        <div className={classes.commentRightPart}>
+          <div className={classes.commentContent}>
+            <div className={classes.commentAuthor}>{comment.username}</div>
+            <div className={classes.date}>{createdAt}</div>
           </div>
-        )}
+          <div className={classes.commentText}>{comment.body}</div>
+
+          {replies.length > 0 && (
+            <div className={classes.replies}>
+              {replies.map((reply) => (
+                <Comment
+                  comment={reply}
+                  key={reply.id}
+                  replies={[]}
+                  currentUserId={currentUserId}
+                  deleteComment={deleteComment}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+        <hr></hr>
       </div>
-    </div>
     </div>
   );
 };

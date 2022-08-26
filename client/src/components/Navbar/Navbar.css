@@ -59,3 +59,18 @@
   text-decoration: none;
   color: white;
 }
+
+.community {
+  width: 30px !important;
+  height: 30px !important;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.list-group {
+  position: absolute;
+  top: 4rem;
+  right: 9rem;
+  width: 15rem;
+  z-index: 1000;
+}

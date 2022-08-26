@@ -5,3 +5,6 @@
 .cards{
     display:flex;
 }
+.search-filter{
+    padding-left:200px;
+}

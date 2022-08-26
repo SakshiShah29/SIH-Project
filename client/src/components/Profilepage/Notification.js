@@ -49,7 +49,12 @@ const Notification = () => {
                     {/* <small class="text-muted">And some muted small print.</small> */}
                 </a>
             </div>
-            <img src={bell} className="bell-notify" onClick={showNotificationDropDown} style={{ cursor: "pointer" }}></img>
+            <div className='icon'>
+            <img src={bell} className="bell-notify" onClick={showNotificationDropDown} style={{ cursor: "pointer" }}/>
+           
+     
+            <div className='counter'></div>
+            </div>
         </>
     )
 }

@@ -9,10 +9,9 @@ import post3 from '../../images/post-3.svg'
 import post4 from '../../images/post-4.svg'
 import post5 from '../../images/post-5.svg'
 import Footer from './footer'
-
 import LoginModal from '../Modals/LoginModal'
 import SignupModal from '../Modals/SignupModal'
-
+import VidCardLandingPage from './VidCardLandingPage'
 
 
 const LandingPage = (props) => {
@@ -50,8 +49,7 @@ const LandingPage = (props) => {
 
             <div className="landing-page d-flex flex-column justify-content-center align-items-center">
 
-                <CardLandingPage onClick={showLoginPage} imageName={vsCodeVariable} />
-
+                <VidCardLandingPage />
                 <h1>Our Features</h1>
                 <CardLandingPage onClick={showLoginPage} imageName={post1} />
                 <CardLandingPageReverse onClick={showLoginPage} imageName={post2} />

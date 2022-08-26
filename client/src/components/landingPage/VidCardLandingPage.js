@@ -12,7 +12,7 @@ const VidCardLandingPage = (props) => {
                     <p className="card-text-landingPage">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     {/* <Button buttonName="Explore Projects" onClick={props.onClick} /> */}
                 </div>
-                <video width="500" height="350" autoPlay controls>
+                <video width="600" height="450" autoPlay controls>
                     <source src={landingPageVid} type="video/mp4" />
                 </video>
             </div>

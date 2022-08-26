@@ -15,7 +15,7 @@ function MainHeader(props) {
               <img src={arrow}></img>
             </a>
           </Link>
-          <Link to="/landingPage">
+          <Link to="/">
             <Logout />
           </Link>
         </div>

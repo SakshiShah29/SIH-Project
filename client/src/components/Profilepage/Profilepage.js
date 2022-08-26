@@ -117,7 +117,7 @@ const Profilepage = () => {
   // console.log(data.data.branch);
 
   function backtohomepage() {
-    navigate("/homePage");
+    navigate("/");
   }
 
   if (data.error) {

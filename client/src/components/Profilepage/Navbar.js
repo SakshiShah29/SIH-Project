@@ -19,7 +19,6 @@ const Navbar = (props) => {
         onEdit={props.onEdit}
       />
       <div className={classes.btn}>
-        <Button onClick={props.onMessage}>Message</Button>
         <Button onClick={props.onClick}>Upload Project</Button>
       </div>
     </div>

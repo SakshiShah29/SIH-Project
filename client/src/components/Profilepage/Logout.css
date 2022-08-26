@@ -42,16 +42,3 @@ a:hover {
   background-color: #331bac;
   text-decoration: none;
 }
-
-.bell_icon {
-  height: 25px;
-  width: 25px;
-  margin-right: 16px;
-  ;
-}
-
-.notification-badge {
-  /* top: 30px; */
-  left: 25px;
-  font-size: 0.5rem;
-}

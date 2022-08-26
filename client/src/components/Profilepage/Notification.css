@@ -1,0 +1,9 @@
+.list-group-item-notification {
+    background-color: #684BFE;
+    color: #fff !important;
+}
+
+.list-group-item-notification:hover {
+    background-color: #3f2d9b;
+    color: #fff !important;
+}

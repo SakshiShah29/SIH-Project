@@ -13,7 +13,7 @@ import Ongoing from "./components/Profilepage/Ongoing";
 import Remaining from "./components/Profilepage/Remaining";
 import Wallet from "./components/ipfs/connectwallet";
 import Showevent from "./components/loginPage/Showevents";
-import Filter from './components/filter/Filter'
+
 import ProjectContext from "./components/contexts/ProjectdetailProvider";
 // import WalletContext from "./Stores/wallet-context";
 
@@ -37,102 +37,108 @@ function App() {
   let [walletaddress, setwalletaddress] = useState('')
   let [projectdetails, setprojectdetails] = useState({})
 
-  return (
-    <>
+  function App() {
+    let [walletaddress, setwalletaddress] = useState("");
+    let [projectdetails, setprojectdetails] = useState({});
 
-      {/* <Profilepage /> */}
-      <ProjectContext.Provider value={{ projectdetails, setprojectdetails }}>
-        <Router>
-          <Routes>
-            <Route path="/homePage" element={<HomePage />} />
-            <Route path="/filter" element={<Filter />} />
 
-            <Route
-              path="/Showevent"
-              element={<Showevent walletaddress={walletaddress} />}
-            />
-            {/* // <Route path="/Chat" element={<Chatapplication />} /> */}
-            {/* <Route path="/" element={<Chatapplication />} /> */}
-            {/* <Route path="/" element={<Chatlogin />} /> */}
-            <Route
-              path="/"
-              element={
-                <LandingPage
-                  walletaddress={walletaddress}
-                  setwalletaddress={setwalletaddress}
-                />
-              }
-            />
-            {/*<Route path="/projectUpload" element={<ProjectUpload />} />*/}
-            <Route path="/ProjectDetails" element={<ProjectDetails />} />
-            <Route
-              path="/ProfilePage"
-              element={
-                <div>
-                  <Profilepage />
+    return (
+      <>
 
-                </div>
-              }
-            />
-            <Route
-              path="/ProfilePage/Completed"
-              element={
-                <div>
-                  <Profilepage />
-                  {/* <Completed /> */}
-                </div>
-              }
-            ></Route>
-            <Route
-              path="/ProfilePage/Ongoing"
-              element={
-                <div>
-                  <Profilepage />
-                  {/* <Ongoing /> */}
-                </div>
-              }
-            ></Route>
-            <Route
-              path="/ProfilePage/Remaining"
-              element={
-                <div>
-                  <Profilepage />
-                  {/* <Remaining /> */}
-                </div>
-              }
-            ></Route>
-            <Route path="/UploadProject" element={<Wallet />}></Route>
-            {/* <Route path="/UploadProject2" element={<UploadProject />}></Route> */}
-            {/* <Route path="/Chat" element={<Chat />}></Route> */}
-          </Routes>
-        </Router>
-      </ProjectContext.Provider>.
-      <div className="App" id="chatApp">
-        {!showChat ? (
-          <div className="joinChatContainer">
-            <h3>Join A Chat</h3>
-            <input
-              type="text"
-              placeholder="John..."
-              onChange={(event) => {
-                setUsername(event.target.value);
-              }}
-            />
-            <input
-              type="text"
-              placeholder="Room ID..."
-              onChange={(event) => {
-                setRoom(event.target.value);
-              }}
-            />
-            <button onClick={joinRoom}>Join A Room</button>
-          </div>
-        ) : (
-          <Chat socket={socket} username={username} room={room} />
-        )}
-      </div>
-    </>
-  );
+        {/* <Profilepage /> */}
+        <ProjectContext.Provider value={{ projectdetails, setprojectdetails }}>
+          <Router>
+            <Routes>
+              <Route path="/homePage" element={<HomePage />} />
+              <Route path="/filter" element={<Filter />} />
+
+              <Route
+                path="/Showevent"
+                element={<Showevent walletaddress={walletaddress} />}
+              />
+              {/* // <Route path="/Chat" element={<Chatapplication />} /> */}
+              {/* <Route path="/" element={<Chatapplication />} /> */}
+              {/* <Route path="/" element={<Chatlogin />} /> */}
+              <Route
+                path="/"
+                element={
+                  <LandingPage
+                    walletaddress={walletaddress}
+                    setwalletaddress={setwalletaddress}
+                  />
+                }
+              />
+              {/*<Route path="/projectUpload" element={<ProjectUpload />} />*/}
+              <Route path="/ProjectDetails" element={<ProjectDetails />} />
+              <Route
+                path="/ProfilePage"
+                element={
+                  <div>
+                    <Profilepage />
+
+                  </div>
+                }
+              />
+              <Route
+                path="/ProfilePage/Completed"
+                element={
+                  <div>
+                    <Profilepage />
+                    {/* <Completed /> */}
+                  </div>
+                }
+              ></Route>
+              <Route
+                path="/ProfilePage/Ongoing"
+                element={
+                  <div>
+                    <Profilepage />
+                    {/* <Ongoing /> */}
+                  </div>
+                }
+              ></Route>
+              <Route
+                path="/ProfilePage/Remaining"
+                element={
+                  <div>
+                    <Profilepage />
+                    {/* <Remaining /> */}
+                  </div>
+                }
+              ></Route>
+              <Route path="/UploadProject" element={<Wallet />}></Route>
+              {/* <Route path="/UploadProject2" element={<UploadProject />}></Route> */}
+              {/* <Route path="/Chat" element={<Chat />}></Route> */}
+            </Routes>
+          </Router>
+        </ProjectContext.Provider>.
+        <div className="App" id="chatApp">
+          {!showChat ? (
+            <div className="joinChatContainer">
+              <h3>Join A Chat</h3>
+              <input
+                type="text"
+                placeholder="John..."
+                onChange={(event) => {
+                  setUsername(event.target.value);
+                }}
+              />
+              <input
+                type="text"
+                placeholder="Room ID..."
+                onChange={(event) => {
+                  setRoom(event.target.value);
+                }}
+              />
+              <button onClick={joinRoom}>Join A Room</button>
+            </div>
+          ) : (
+            <Chat socket={socket} username={username} room={room} />
+          )}
+        </div>
+      </>
+    );
+  }
 }
 
 export default App;

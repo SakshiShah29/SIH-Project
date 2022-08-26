@@ -1,16 +1,14 @@
+.img {
 
-
-.img{
-   
-    position: absolute;
-   border:20px solid #684BFE;
- 
-box-shadow: 0px 4px 4px rgba(104, 75, 254, 0.47);
+    /* position: absolute; */
+    border: 8px solid #684BFE;
+    /*  
+box-shadow: 0px 4px 4px rgba(104, 75, 254, 0.47); */
     border-radius: 50%;
-height: 250px;
-width: 250px;
-background-clip: inherit;
+    height: 250px;
+    width: 250px;
+    background-clip: inherit;
+    margin-right: 20px;
 
-
-z-index: 10;
+    /* z-index: 10; */
 }

@@ -1,155 +1,156 @@
-
-
 .comments {
-    margin-top: 20px;
-    
-  }
-  .upper{
-    display:flex;
-    justify-content: space-between;
-    
-  }
-  
-  .upper>h3{
-    background-color: #2B3566;
-    overflow-y: hidden;
-  }
-  .commentsTitle {
-    font-size: 25px;
-color:#fff;
-    margin-bottom: 18px;
-    padding-top:18px;
-    padding-left: 18px;
-    font-weight: 700;
-  }
-  .commentlinker{
-    font-size: 18px;
-    color:#fff;
-    text-decoration: underline;
-    padding-top: 15px;
-    padding-right: 15px;
-  }
-  .commentsContainer {
-    margin-top: 40px;
-    
-  }
-  
-  .formContainer{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
-    
-  }
-  
-  .commentFormTextarea {
-  width:100% !important;
-    height: 100px;
+  margin-top: 20px;
+
+}
+
+.upper {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.upper>h3 {
+  background-color: #2B3566;
+  overflow-y: hidden;
+}
+
+.commentsTitle {
+  font-size: 25px;
+  color: #fff;
+  margin-bottom: 18px;
+  padding-top: 18px;
+  padding-left: 18px;
+  font-weight: 700;
+}
+
+.commentlinker {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: underline;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+
+.commentsContainer {
+  margin-top: 40px;
+
+}
+
+.formContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+
+}
+
+.commentFormTextarea {
+  width: 100% !important;
+  height: 100px;
   padding-left: 40px;
-    
-  }
-  .comment{
-    margin:40px;
-    margin-left:100px;
-    width:80%;
-    padding: 18px;
-    border-radius: 15px;
-    background: linear-gradient(145deg, #27305c, #2e396d);
-box-shadow:  20px 20px 60px #252d57,
-             -20px -20px 60px #313d75;
-  }
-  
 
-  .commentFormButton {
-    text-decoration: none;
-    color: #fff;
-    background-color: #684BFE;
-    padding: 0.3rem 1.2rem;
-    border-color: transparent;
-    border-radius: 10px;
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-left:20px;
-  }
-  
-  .commentFormButton:hover:enabled {
-    cursor: pointer;
-    background-color: #694bfea6;
-    color: #fff;
-  }
-  
-  .commentFormButton:disabled {
-    opacity: 0.7;
-    cursor: default;
-  }
-  
-  .commentFormCancelButton {
-    margin-left: 10px;
-  }
-  
+}
 
-  
-  .commentImageContainer {
-    margin-right: 12px;
-  }
-  
-  .commentImageContainer img {
-    height:40px;
+.comment {
+  margin: 40px;
+  width: 80%;
+  padding: 18px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #27305c, #2e396d);
+  box-shadow: 20px 20px 60px #252d57,
+    -20px -20px 60px #313d75;
+}
 
-  }
-  
-  .commentRightPart {
-    width:70%;
 
-  }
-  
-  .commentContent {
-    display: flex;
-    
-    
-  }
-  
-  .commentAuthor {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 36px;
-    color:#fff;
-  }
- .date{
-    color:#fff;
-    padding-left: 15px;
-    padding-top: 8px;
-    font-size: small;
-  }
-  
-  .commentText {
-    font-size: 15px;
-    color:#FFF
-  }
-  
-  .commentactions {
-    display: flex;
+.commentFormButton {
+  text-decoration: none;
+  color: #fff;
+  background-color: #684BFE;
+  padding: 0.3rem 1.2rem;
+  border-color: transparent;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-left: 20px;
+}
 
-    font-size: 12px;
-    color: #A4A4A4;
-    
-    cursor: pointer;
-    margin-top: 8px;
-  }
-  
-  .commentAction {
-    margin-right: 8px;
-  }
-  
-  .commentAction:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
-  
-  .replies {
-    margin-top: 20px;
-  }
+.commentFormButton:hover:enabled {
+  cursor: pointer;
+  background-color: #694bfea6;
+  color: #fff;
+}
 
-  
+.commentFormButton:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.commentFormCancelButton {
+  margin-left: 10px;
+}
+
+
+
+.commentImageContainer {
+  margin-right: 12px;
+}
+
+.commentImageContainer img {
+  height: 40px;
+
+}
+
+.commentRightPart {
+  width: 70%;
+
+}
+
+.commentContent {
+  display: flex;
+
+
+}
+
+.commentAuthor {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  color: #fff;
+}
+
+.date {
+  color: #fff;
+  padding-left: 15px;
+  padding-top: 8px;
+  font-size: small;
+}
+
+.commentText {
+  font-size: 15px;
+  color: #FFF
+}
+
+.commentactions {
+  display: flex;
+
+  font-size: 12px;
+  color: #A4A4A4;
+
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.commentAction {
+  margin-right: 8px;
+}
+
+.commentAction:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.replies {
+  margin-top: 20px;
+}

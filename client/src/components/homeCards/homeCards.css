@@ -8,6 +8,10 @@
     cursor: pointer;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .bg-color {
     background-color: #48CCC6 !important;
 }

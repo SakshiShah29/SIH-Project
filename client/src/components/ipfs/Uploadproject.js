@@ -132,10 +132,7 @@ export default function Uploadproject() {
               required
             />
           </div>
-          <div className="mb-3">
-            <label className="label-project-upload">Abstract <span className='cumpulsory'>*</span></label>
-            <input type="text" className="input-project-upload" placeholder="Abstract of your project" />
-          </div>
+
 
 
           <div className="mb-3">
@@ -167,7 +164,7 @@ export default function Uploadproject() {
 
           <div className="mb-3">
             <label className="label-project-upload">Upload Photos</label>
-
+            <ImagesUpload fnc={setFiles} />
             {/* <div className="image-content">
               <div className="image-stack d-inline-block mr-1">
                 <img src={imgSection} className='img-content-uploaded' alt="" />

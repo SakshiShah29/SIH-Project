@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import avatar from "../../images/avatar.png";
 import { useNavigate } from "react-router-dom";
-
+import globe from '../../images/globe.png'
 import "./Navbar.css";
 const Navbar = () => {
 
@@ -21,7 +21,8 @@ const Navbar = () => {
           <p>Sahayog</p>
         </div>
         <div className="menu">
-          <p>User Name</p>
+          <img src={globe} alt="" />
+          <p>Het</p>
           <img src={avatar} alt="" onClick={openProfile} />
         </div>
       </div>
@@ -34,12 +35,12 @@ const Navbar = () => {
           </li>
           <li>
             {" "}
-            <Link to="/landingPage">LogOut</Link>{" "}
+            <Link to="/">LogOut</Link>{" "}
           </li>
-          <li>
+          {/* <li>
             {" "}
             <Link to="/Chatprofile">Message application</Link>{" "}
-          </li>
+          </li> */}
         </ul>
       </div>
     </>

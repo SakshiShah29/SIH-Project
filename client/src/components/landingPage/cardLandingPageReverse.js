@@ -5,7 +5,7 @@ import './landingPage.css'
 const cardLandingPageReverse = (props) => {
     return (
         <>
-            <div className="cardLandingPage mb-5 mt-5" >
+            <div className="cardLandingPage" >
                 <img src={props.imageName} className="card-img-top" alt="..." />
 
                 <div className="card-body ml-2">

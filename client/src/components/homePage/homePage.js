@@ -7,7 +7,6 @@ import HomeCards from "../homeCards/homeCards";
 import Pagination from "../pagination/pagination";
 import "../search/search.css";
 import filter from "../../images/filter.png";
-
 // import data from "../Data.json";
 import data from "../Data.json";
 import search from "../search/search";

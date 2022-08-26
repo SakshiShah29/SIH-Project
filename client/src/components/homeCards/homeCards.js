@@ -25,9 +25,9 @@ const HomeCards = (props) => {
     <>
       {!cardclicked && (
         <div className="homeCard" onClick={handleProjectHomeCLick}>
-          <span className="badge rounded-pill bg-color text-bg-primary">
+          {/* <span className="badge rounded-pill bg-color text-bg-primary">
             Completed
-          </span>
+          </span> */}
           <p className="cardTitle">{props.title}</p>
           <p className="cardSubtitle">{props.university}</p>
           <div className="tech-stack-home">

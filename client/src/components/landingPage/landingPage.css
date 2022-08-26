@@ -120,3 +120,8 @@
     padding: 1rem;
     color: #fff;
 }
+
+video {
+    border: 1px solid #684BFE;
+    border-radius: 7px;
+}

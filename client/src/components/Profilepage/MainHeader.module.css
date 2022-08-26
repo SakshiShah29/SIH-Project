@@ -1,23 +1,33 @@
 .header {
-    height:380px;
-    width:100%;
+    height: 380px;
+    width: 100%;
     background-color: #030824;
-  }
+}
 
-.upper{
-    display:flex;
+.upper {
+    display: flex;
     justify-content: space-between;
 }
 
-.upper > a{
-    color:#684BFE;
-    font-size: 40px;
-    margin-left: 40px;
-   
+.message_icon {
+    position: absolute;
+    top: 1.7rem;
+    right: 13.5rem;
+    width: 26px;
+    height: 26px;
     cursor: pointer;
 }
-.upper >a:hover,
-.upper:active{
-    color:white;
-   
+
+.upper>a {
+    color: #684BFE;
+    font-size: 40px;
+    margin-left: 40px;
+
+    cursor: pointer;
+}
+
+.upper>a:hover,
+.upper:active {
+    color: white;
+
 }

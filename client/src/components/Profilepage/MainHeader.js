@@ -3,11 +3,16 @@ import Logout from "./Logout";
 import classes from "./MainHeader.module.css";
 import Navbar from "./Navbar";
 import Notification from "./Notification";
+import Message from '../../images/Message.png'
 import arrow from "../../images/Vector.png";
 import { Link } from "react-router-dom";
 import ProfileBadge from "./ProfileBadge";
 function MainHeader(props) {
   let { name, institute, branch, interests, description, id } = props;
+
+  const handleMessageIcon = () => {
+    document.querySelector("#chatApp").classList.toggle('d-none')
+  }
   return (
     <Fragment>
       <div className={classes.header}>
@@ -17,6 +22,7 @@ function MainHeader(props) {
               <img src={arrow}></img>
             </a>
           </Link>
+          <img src={Message} alt="" className={classes.message_icon} onClick={handleMessageIcon} />
           <Notification />
 
           <Link to="/">

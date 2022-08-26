@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
-
+import io from "socket.io-client";
+import Chat from './components/Chat'
 import LandingPage from "./components/landingPage/LandingPage";
 import Navbar from "./components/Navbar/Navbar";
 import Profilepage from "./components/Profilepage/Profilepage";
@@ -11,7 +12,6 @@ import Completed from "./components/Profilepage/Completed ";
 import Ongoing from "./components/Profilepage/Ongoing";
 import Remaining from "./components/Profilepage/Remaining";
 import Wallet from "./components/ipfs/connectwallet";
-import Auth from "./components/Auth/Auth.jsx";
 import Showevent from "./components/loginPage/Showevents";
 import Filter from './components/filter/Filter'
 import ProjectContext from "./components/contexts/ProjectdetailProvider";
@@ -20,13 +20,26 @@ import ProjectContext from "./components/contexts/ProjectdetailProvider";
 
 
 
+const socket = io.connect("http://localhost:5000");
 
 function App() {
+  const [username, setUsername] = useState("");
+  const [room, setRoom] = useState("");
+  const [showChat, setShowChat] = useState(false);
+
+  const joinRoom = () => {
+    if (username !== "" && room !== "") {
+      socket.emit("join_room", room);
+      setShowChat(true);
+    }
+  };
+
   let [walletaddress, setwalletaddress] = useState('')
   let [projectdetails, setprojectdetails] = useState({})
 
   return (
     <>
+
       {/* <Profilepage /> */}
       <ProjectContext.Provider value={{ projectdetails, setprojectdetails }}>
         <Router>
@@ -57,7 +70,7 @@ function App() {
               element={
                 <div>
                   <Profilepage />
-                 
+
                 </div>
               }
             />
@@ -93,7 +106,31 @@ function App() {
             {/* <Route path="/Chat" element={<Chat />}></Route> */}
           </Routes>
         </Router>
-      </ProjectContext.Provider>
+      </ProjectContext.Provider>.
+      <div className="App" id="chatApp">
+        {!showChat ? (
+          <div className="joinChatContainer">
+            <h3>Join A Chat</h3>
+            <input
+              type="text"
+              placeholder="John..."
+              onChange={(event) => {
+                setUsername(event.target.value);
+              }}
+            />
+            <input
+              type="text"
+              placeholder="Room ID..."
+              onChange={(event) => {
+                setRoom(event.target.value);
+              }}
+            />
+            <button onClick={joinRoom}>Join A Room</button>
+          </div>
+        ) : (
+          <Chat socket={socket} username={username} room={room} />
+        )}
+      </div>
     </>
   );
 }

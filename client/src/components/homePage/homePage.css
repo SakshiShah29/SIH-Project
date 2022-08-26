@@ -1,7 +1,10 @@
-.homePage{
+.homePage {
     background: #111634;
-    height:100vh;
+    height: 100vh;
 }
-.cards{
-    display:flex;
+
+.cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    overflow: visible;
 }

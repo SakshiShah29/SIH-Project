@@ -55,11 +55,7 @@ function BottomHeader(props) {
       <header className={classes.header}>
         <nav>
           <ul>
-            <button onClick={btnc}>
-              {/* <Link to="/ProfilePage/Completed"> */}
-              <p>Completed</p>
-              {/* </Link> */}
-            </button>
+            
             <button onClick={btno}>
               {/* <Link to="/ProfilePage/Ongoing"> */}
               <p>Ongoing</p>
@@ -74,7 +70,7 @@ function BottomHeader(props) {
         </nav>
       </header>
       <div>
-        {completed && <Completed projects={data.data.completed_projects} />}
+        
         {pending && <Remaining projects={data.data.pending_projects} />}
         {ongoing && <Ongoing projects={data.data.ongoing_projects} />}
       </div>

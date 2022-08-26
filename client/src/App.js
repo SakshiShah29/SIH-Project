@@ -107,7 +107,7 @@ function App() {
           </Routes>
         </Router>
       </ProjectContext.Provider>.
-      <div className="App" id="chatApp">
+      <div className="App d-none" id="chatApp">
         {!showChat ? (
           <div className="joinChatContainer">
             <h3>Join A Chat</h3>

@@ -4,6 +4,7 @@ import classes from "./MainHeader.module.css";
 import Navbar from "./Navbar";
 import Notification from "./Notification";
 import Message from '../../images/Message.png'
+import editor from '../../images/text-editor.png'
 import arrow from "../../images/Vector.png";
 import { Link } from "react-router-dom";
 import ProfileBadge from "./ProfileBadge";
@@ -23,6 +24,7 @@ function MainHeader(props) {
             </a>
           </Link>
           <img src={Message} alt="" className={classes.message_icon} onClick={handleMessageIcon} />
+          <img src={editor} alt="" className={classes.message_icon} onClick={handleMessageIcon} />
           <Notification />
 
           <Link to="/">

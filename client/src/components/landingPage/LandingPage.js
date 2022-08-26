@@ -52,7 +52,7 @@ const LandingPage = (props) => {
 
                 <CardLandingPage onClick={showLoginPage} imageName={vsCodeVariable} />
 
-                <h1 className='mt-5 mb-5'>Our Features</h1>
+                <h1>Our Features</h1>
                 <CardLandingPage onClick={showLoginPage} imageName={post1} />
                 <CardLandingPageReverse onClick={showLoginPage} imageName={post2} />
                 <CardLandingPage onClick={showLoginPage} imageName={post3} />

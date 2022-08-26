@@ -3,8 +3,8 @@ const fs = require("fs");
 
 var data = fs.readFileSync(
 
-  "C:/Users/Sakshi Shah/OneDrive/Documents/GitHub-projects/SIH-Project/Data.json",
-  // "H:/SIH-Project/Data.json",
+  // "C:/Users/Sakshi Shah/OneDrive/Documents/GitHub-projects/SIH-Project/Data.json",
+  "H:/SIH-Project/Data.json",
 
   // "C:/Users/Sakshi Shah/OneDrive/Documents/GitHub-projects/SIH-Project/Data.json"
 
@@ -66,8 +66,8 @@ uploadrouter.post(
 
     var datajson = fs.readFileSync(
 
-      "C:/Users/Sakshi Shah/OneDrive/Documents/GitHub-projects/SIH-Project/Data.json",
-      // "H:/SIH-Project/Data.json",
+      // "C:/Users/Sakshi Shah/OneDrive/Documents/GitHub-projects/SIH-Project/Data.json",
+      "H:/SIH-Project/Data.json",
 
       // "C:/Users/Sakshi Shah/OneDrive/Documents/GitHub-projects/SIH-Project/Data.json"
 
@@ -133,9 +133,9 @@ uploadrouter.post(
           fs.writeFile(
             // "C:/Users/Bhaskar/Desktop/SIH-clone/SIH-Project/client/src/components/Data.json",
             // "C:/Users/Sakshi Shah/OneDrive/Documents/GitHub-projects/SIH-Project/Data.json",
-            "C:/Users/Sakshi Shah/OneDrive/Documents/GitHub-projects/SIH-Project/Data.json",
+            // "C:/Users/Sakshi Shah/OneDrive/Documents/GitHub-projects/SIH-Project/Data.json",
 
-            // "H:/SIH-Project/Data.json",
+            "H:/SIH-Project/Data.json",
 
             newData,
             (err) => {

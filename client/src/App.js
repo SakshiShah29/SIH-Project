@@ -13,17 +13,13 @@ import Remaining from "./components/Profilepage/Remaining";
 import Wallet from "./components/ipfs/connectwallet";
 import Auth from "./components/Auth/Auth.jsx";
 import Showevent from "./components/loginPage/Showevents";
-import Filter from './components/Filter/Filter'
+import Filter from "./components/filter/Filter";
 import ProjectContext from "./components/contexts/ProjectdetailProvider";
 // import WalletContext from "./Stores/wallet-context";
 
-
-
-
-
 function App() {
-  let [walletaddress, setwalletaddress] = useState('')
-  let [projectdetails, setprojectdetails] = useState({})
+  let [walletaddress, setwalletaddress] = useState("");
+  let [projectdetails, setprojectdetails] = useState({});
 
   return (
     <>

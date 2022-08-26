@@ -8,8 +8,15 @@ const VidCardLandingPage = (props) => {
             <div className="cardLandingPage" >
 
                 <div className="card-body">
-                    <h5 className="card-title-landingPage">Card title</h5>
-                    <p className="card-text-landingPage">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 className="card-title-landingPage">Sahayog Portal</h5>
+                    <p className="card-text-landingPage">To develop a progressive web application with amazing user interface which
+                        caters the needs of allthe university/college students and faculty across India.
+                        Here students will be able to upload their projects along with it’s project
+                        description after being approved by their respective admins in each university
+                        and these projects will be listed underthe respective universities.
+                        Students will also be able to see the problem statements of different projects
+                        taken up by students across the universities in various domains and can even
+                        collaborate with them if consentis approved.</p>
                     {/* <Button buttonName="Explore Projects" onClick={props.onClick} /> */}
                 </div>
                 <video width="600" height="450" autoPlay controls>

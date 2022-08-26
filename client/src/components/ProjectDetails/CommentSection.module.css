@@ -31,10 +31,7 @@
   padding-right: 15px;
 }
 
-.commentsContainer {
-  margin-top: 40px;
-
-}
+.commentsContainer {}
 
 .formContainer {
   width: 100%;
@@ -52,13 +49,8 @@
 }
 
 .comment {
-  margin: 40px;
-  width: 80%;
+  margin: auto;
   padding: 18px;
-  border-radius: 15px;
-  background: linear-gradient(145deg, #27305c, #2e396d);
-  box-shadow: 20px 20px 60px #252d57,
-    -20px -20px 60px #313d75;
 }
 
 

@@ -22,16 +22,16 @@ export default function Uploadproject() {
     console.log(files);
   }, [files]);
 
-  const handleStatusChange = () => {
-    if (document.querySelector("#OnGoing").checked) {
-      document.querySelector(".upload-to-ipfs").classList.add("d-none");
-      setprojectcompletion(true);
-    } else if (document.querySelector("#Completed").checked) {
-      document.querySelector(".upload-to-ipfs").classList.remove("d-none");
-      setprojectcompletion(false);
-    }
-    console.log(projectcompletion)
-  };
+  // const handleStatusChange = () => {
+  //   if (document.querySelector("#OnGoing").checked) {
+  //     document.querySelector(".upload-to-ipfs").classList.add("d-none");
+  //     setprojectcompletion(true);
+  //   } else if (document.querySelector("#Completed").checked) {
+  //     document.querySelector(".upload-to-ipfs").classList.remove("d-none");
+  //     setprojectcompletion(false);
+  //   }
+  //   console.log(projectcompletion)
+  // };
 
   let tech_array = [];
   const handleSelectStack = (e) => {
@@ -132,10 +132,7 @@ export default function Uploadproject() {
               required
             />
           </div>
-          <div className="mb-3">
-            <label className="label-project-upload">Abstract <span className='cumpulsory'>*</span></label>
-            <input type="text" className="input-project-upload" placeholder="Abstract of your project" />
-          </div>
+
 
 
           <div className="mb-3">
@@ -167,7 +164,7 @@ export default function Uploadproject() {
 
           <div className="mb-3">
             <label className="label-project-upload">Upload Photos</label>
-
+            <ImagesUpload fnc={setFiles} />
             {/* <div className="image-content">
               <div className="image-stack d-inline-block mr-1">
                 <img src={imgSection} className='img-content-uploaded' alt="" />
@@ -196,7 +193,7 @@ export default function Uploadproject() {
           </div>
 
 
-          <div className="mb-3">
+          {/* <div className="mb-3">
             <label className="label-project-upload">
               Project Status <span className="cumpulsory">*</span>
             </label>
@@ -226,7 +223,7 @@ export default function Uploadproject() {
                 OnGoing
               </label>
             </div>
-          </div>
+          </div> */}
           <div className="upload-to-ipfs">
             <label className="label-project-upload">Upload Project <span className="cumpulsory">*</span> </label>
             <Ipfs url={seturl} />

@@ -1,0 +1,23 @@
+.list-group-item-notification {
+    background-color: #684BFE;
+    color: #fff !important;
+}
+
+.list-group-item-notification:hover {
+    background-color: #3f2d9b;
+    color: #fff !important;
+}
+
+.ounter{
+    width:5px;
+    height:5px;
+    background-color: red;
+    border-radius:50%;
+    padding:5px;
+    font-size: 12px;
+    display:flex;
+    align-items: center;
+    padding-top: 200px;
+    justify-content: center;
+    position: absolute;
+}

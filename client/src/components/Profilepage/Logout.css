@@ -3,37 +3,42 @@
   padding-top: 20px;
 }
 
-.nav button {
+.logout_button {
   color: #fff;
-  background-color: transparent;
+  background-color: #684BFE;
   /* outline: 1px solid #684BFE; */
   border: none;
-  /* padding: 0.7rem 1.5rem; */
+  padding: 0.4em 1rem;
   margin-right: 1rem;
   /* margin-bottom: 1em; */
   border-radius: 10px;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500;
 
 }
 
+a:hover {
+  text-decoration: none;
+}
 
+.notification-group {
+  position: absolute;
+  font-size: 1rem;
+  right: 9rem;
+  top: 5rem;
+  width: auto;
+}
 
-.nav button:hover,
-.nav button:active {
+.bell-notify {
+  position: absolute;
+  top: 1.5rem;
+  right: 10rem;
+  width: 28px;
+  height: 28px;
+}
+
+.logout_button:hover {
   color: #fff;
-  background-color: #684BFE;
-}
-
-.bell_icon {
-  height: 25px;
-  width: 25px;
-  margin-right: 16px;
-  ;
-}
-
-.notification-badge {
-  /* top: 30px; */
-  left: 25px;
-  font-size: 0.5rem;
+  background-color: #331bac;
+  text-decoration: none;
 }

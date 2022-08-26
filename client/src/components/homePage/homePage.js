@@ -7,9 +7,11 @@ import HomeCards from "../homeCards/homeCards";
 import Pagination from "../pagination/pagination";
 import "../search/search.css";
 import filter from "../../images/filter.png";
+
 // import data from "../Data.json";
 import data from "../Data.json";
 import search from "../search/search";
+import FilterModal from "../Modals/FilterModal";
 let searchword2 = "";
 let searchword = "";
 
@@ -21,7 +23,7 @@ export default function Homepage() {
   //This is the state that handles the filtered data
   //The initial state is when the projects are only shown for that particular university only
   //For that we first need the university of the student
-
+const [showFilter,setShowFilter]=useState(false);
   const initial = () => {
     let studentuniversity = "Chandubhai S. Patel Institute of Technology";
     return data.filter((value) => {
@@ -35,7 +37,12 @@ export default function Homepage() {
   const [filtereddata, setfiltereddata] = useState(initial());
 
   const [filtereddata2, setfiltereddata2] = useState([]);
-
+const  showfilter=()=>{
+setShowFilter(true)
+}
+const filterhandler=()=>{
+  setShowFilter(false)
+}
   function handlefilterdata(event) {
     let filter;
     searchword = event.target.value;
@@ -114,6 +121,7 @@ export default function Homepage() {
   }
   return (
     <>
+    {showFilter && <FilterModal filter={filterhandler}/>}
       <div className="homePage">
         <Navbar />
         <div className="search-filter mb-5">
@@ -129,8 +137,8 @@ export default function Homepage() {
             placeholder="Search Your Project by typing the university Here"
             onChange={handlefilterdata2}
           /> */}
-          <button className="button-filter">
-            <img src={filter} alt="" />
+          <button   className="button-filter">
+            <img onClick={showfilter} src={filter} alt="" />
           </button>
         </div>
         {console.log(filtereddata, "ThiS is the filtered data1")}

@@ -12,11 +12,11 @@ const Head = () => {
       <div className={classes.header}>
         <div className={classes.upper}>
           <div className={classes.logo}><h2>Logo</h2></div>
-          <Link to="/landingPage">
-            <Logout/>
+          <Link to="/">
+            <Logout />
           </Link>
         </div>
-       
+
       </div>
     </Fragment>
   )

@@ -9,18 +9,19 @@
     justify-content: space-around;
     align-items: center;
     /* width: 75%; */
-    margin: 10rem auto;
+    padding: 0;
+    margin: 4rem auto;
 }
 
 .cardLandingPage>img {
 
-    height: 263.43px;
-    width: 495.92px;
+    height: 300px;
+    width: 550px;
 }
 
 .landing-page:first-child>img {
-    height: 441px;
-    width: 761px;
+    height: 300px;
+    width: 550px;
     border-radius: 20px;
 }
 
@@ -115,7 +116,7 @@
 .footer {
     text-align: center;
     background-color: #030824;
-    font-size: 3.5rem;
+    font-size: 2rem;
     padding: 1rem;
     color: #fff;
 }

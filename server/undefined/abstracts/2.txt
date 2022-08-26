@@ -1,0 +1,1 @@
+This a tic tac toe game made by us that uses math logic to play the game by the rules for vertical , horizontal and vertical combinations of similar tokens that are a cross and an 'o'.

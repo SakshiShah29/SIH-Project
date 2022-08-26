@@ -2,8 +2,10 @@ import React, { Fragment } from "react";
 import Logout from "./Logout";
 import classes from "./MainHeader.module.css";
 import Navbar from "./Navbar";
+import Notification from "./Notification";
 import arrow from "../../images/Vector.png";
 import { Link } from "react-router-dom";
+import ProfileBadge from "./ProfileBadge";
 function MainHeader(props) {
   let { name, institute, branch, interests, description, id } = props;
   return (
@@ -15,7 +17,9 @@ function MainHeader(props) {
               <img src={arrow}></img>
             </a>
           </Link>
-          <Link to="/landingPage">
+          <Notification />
+
+          <Link to="/">
             <Logout />
           </Link>
         </div>
@@ -30,6 +34,7 @@ function MainHeader(props) {
           description={description}
           id={id}
         />
+        <ProfileBadge />
       </div>
     </Fragment>
   );

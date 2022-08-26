@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import close from "../../images/Close.png";
-import user from "../../images/user.png";
+import user from "../../images/img5.png";
 import { Marginer } from "../loginPage/marginer";
 import classes from "./EditProfile.module.css";
 

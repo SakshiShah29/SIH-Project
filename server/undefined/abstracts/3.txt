@@ -1,0 +1,1 @@
+Face detection is one of the most fundamental aspects of computer vision. It is the base of many further studies like identifying specific people

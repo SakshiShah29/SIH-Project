@@ -3,9 +3,7 @@
     "title": "To do list react",
     "abstract": "This is a simple to do list application where the user logs in their daily tasks. This application was created for the purpose of understanding react hooks",
     "images": [],
-    "collaborators": [
-      "undefined"
-    ],
+    "collaborators": ["undefined"],
     "projectstatus": "Pending",
     "projectcompletion": true,
     "techstack": [],
@@ -17,6 +15,42 @@
     "university": "Chandubhai S. Patel Institute of Technology",
     "leaddomain": "Web development",
     "_id": "630008de3705d066ad622e04",
+    "__v": 0
+  },
+  {
+    "title": "Face Detection Model",
+    "abstract": "Face detection is one of the most fundamental aspects of computer vision. It is the base of many further studies like identifying specific people",
+    "images": [],
+    "collaborators": [""],
+    "projectstatus": "Pending",
+    "projectcompletion": true,
+    "techstack": [],
+    "technologiesused": [],
+    "projecturl": "ipfs://bafybeiesrr7mbnw7d6qosgi6fam7ss6hjhbjhvz6f2ade2iifbcj6nqr4m",
+    "leadaccountaddress": "0x6fc88f402e6e8aac089366f95186db80675f771d",
+    "leadprofileid": "62f4117c3b45350a26863144",
+    "adminaddress": "0xe27e8be768b01070f4eb12523e8a52f8d682f1fa",
+    "university": "Chandubhai S. Patel Institute of Technology",
+    "leaddomain": "Web development",
+    "_id": "630838e2563a91f0cec7f86d",
+    "__v": 0
+  },
+  {
+    "title": "Face Detection Model",
+    "abstract": "Face detection is one of the most fundamental aspects of computer vision. It is the base of many further studies like identifying specific people",
+    "images": [],
+    "collaborators": [""],
+    "projectstatus": "Pending",
+    "projectcompletion": true,
+    "techstack": [],
+    "technologiesused": [],
+    "projecturl": "ipfs://bafybeiesrr7mbnw7d6qosgi6fam7ss6hjhbjhvz6f2ade2iifbcj6nqr4m",
+    "leadaccountaddress": "0x6fc88f402e6e8aac089366f95186db80675f771d",
+    "leadprofileid": "62f4117c3b45350a26863144",
+    "adminaddress": "0xe27e8be768b01070f4eb12523e8a52f8d682f1fa",
+    "university": "Chandubhai S. Patel Institute of Technology",
+    "leaddomain": "Web development",
+    "_id": "6308393c5c8a58f771dfefb2",
     "__v": 0
   }
 ]

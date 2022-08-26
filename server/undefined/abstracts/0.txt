@@ -1,1 +1,1 @@
-This is a simple react application where we have used the concept of hooks. In this application the users can log in their daily tasks and even update and delete them
+Face detection is one of the most fundamental aspects of computer vision. It is the base of many further studies like identifying specific people

@@ -1,16 +1,19 @@
 import React from 'react'
-import classes from "./Logout.css"
-import bell from '../../images/bell.png'
+import "./Logout.css"
+
+
 function Logout(props) {
 
-  const showNotificationDropDown = () => {
 
-  }
   return (
-    <nav className={classes.nav}>
-    <img src={bell}></img>
-          <button onClick={props.onLogout}>LogOut</button>
-  </nav>
+    <>
+
+      <nav className="nav">
+        <button className="logout_button" onClick={props.onLogout}>LogOut</button>
+      </nav>
+
+
+    </>
   )
 }
 

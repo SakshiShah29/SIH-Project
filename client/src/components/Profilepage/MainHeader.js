@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import Logout from "./Logout";
 import classes from "./MainHeader.module.css";
 import Navbar from "./Navbar";
+import Notification from "./Notification";
 import arrow from "../../images/Vector.png";
 import { Link } from "react-router-dom";
 function MainHeader(props) {
@@ -15,6 +16,8 @@ function MainHeader(props) {
               <img src={arrow}></img>
             </a>
           </Link>
+          <Notification />
+
           <Link to="/">
             <Logout />
           </Link>

@@ -3,26 +3,44 @@
   padding-top: 20px;
 }
 
-.nav button {
+.logout_button {
   color: #fff;
-  background-color: transparent;
+  background-color: #684BFE;
   /* outline: 1px solid #684BFE; */
   border: none;
   /* padding: 0.7rem 1.5rem; */
   margin-right: 1rem;
   /* margin-bottom: 1em; */
   border-radius: 10px;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500;
 
 }
 
+a:hover {
+  text-decoration: none;
+}
 
+.notification-group {
+  position: absolute;
+  font-size: 1rem;
+  right: 9rem;
+  top: 5rem;
+  width: auto;
+}
 
-.nav button:hover,
-.nav button:active {
+.bell-notify {
+  position: absolute;
+  top: 1.2rem;
+  right: 9rem;
+  width: 28px;
+  height: 28px;
+}
+
+.logout_button:hover {
   color: #fff;
-  background-color: #684BFE;
+  background-color: #331bac;
+  text-decoration: none;
 }
 
 .bell_icon {

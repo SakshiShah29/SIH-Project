@@ -35,7 +35,7 @@ const Navbar = () => {
 
         </div>
       </div>
-      <div class="list-group d-none">
+      <div class="list-group discord-group d-none">
         <a href="https://discord.gg/zRCyA4YG" target="_blank" class="list-group-item list-group-item-action">Blockchain</a>
         <a href="https://discord.gg/kjfR7CeH" target="_blank" class="list-group-item list-group-item-action">DevOps</a>
         <a href="https://discord.gg/nArjDx7r" target="_blank" class="list-group-item list-group-item-action">Cloud Computing</a>
